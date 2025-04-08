@@ -17,7 +17,7 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-its/RC-Workshops">
+  <a href="https://github.com/universityofsussex-rc/Workshops">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,7 +25,7 @@
   <p align="center">
     This first set of exercise will get you logged into the Open OnDemand Web Portal and Navigate you through each Service.
   </p>
-    <a href="https://github.com/universityofsussex-its/RC-Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -48,14 +48,14 @@
 ## Login
 
 <p>
-  Access to the Artemis Hybrid Research Cluster (HRC) will primarily be via your browser, and if off campus, using the VPN. If you currently do not have access to the VPN - you will need to request as such, and to be added to the relevant departmental group in Palo Alto. It is assumed you either have access now, or are on campus.    
+  Access to the Artemis Hybrid Research Cluster (HRC) is expected to be primarily be via your browser, and if off campus, using the VPN. If you currently do not have access to the VPN - you will need to request as such, and to be added to the relevant departmental group in Palo Alto. It is assumed you either have access now, or are on campus.    
 </p>
 
 ### Open OnDemand
 
 <p>
 
-You will need to access the Open OnDemand Web Portal - via ood.artemis.sussex.ac.uk (if available) or using 139.184.83.139. You will need to login with the test user currently (eventually you will use your Sussex credentials but currently only a demo account is available). Please ask the Intructor for these credentials.
+You will need to access the Open OnDemand Web Portal - via <a href="https://ood.artemis.hrc.sussex.ac.uk">ood.artemis.hrc.sussex.ac.uk</a>. You will need to login with your usual Sussex Username and password. Unfortunately if you are unable to login - this means you currently do not have an account and will need to request one. Please see <a href="https://artemis-docs.hpc.sussex.ac.uk/artemis/access.html">Getting Access</a> page in our documentation.
 
 </p>
 
@@ -63,9 +63,12 @@ You will need to access the Open OnDemand Web Portal - via ood.artemis.sussex.ac
 
 <p>
 
-Similarly to the old Apollo2 HPC, Artemis has login nodes for direct command line access to the cluster. Currently this is not available but will be reachable by the same methods as Apollo2. See Basic Exercises if not familiar with Bash and SSH logins.
-
+Similarly to the old Apollo2 HPC, Artemis has login nodes for direct command line access to the cluster. You can reach this using the same address as above. You will still either need to be on campus, or logged into the Staff VPN.
 </p>
+
+```
+bash-4.2$ ssh anon123@ood.artemis.hrc.sussex.ac.uk
+```
 
 ## Landing Page
 
@@ -75,14 +78,14 @@ The landing page should look like:
 <img src="../../../images/sge-slurm/ood-splash.png"/>
 <p>
 
-This page will display various message of the day, will have common apps and services pinned to the bar, and have navigation links to our documentation site https://artemis-docs.hrc.sussex.ac.uk (not currently available).
+This page will display various message of the day, will have common apps and services pinned to the bar, and have navigation links to our documentation site <a href="https://artemis-docs.hrc.sussex.ac.uk/artemis">https://artemis-docs.hrc.sussex.ac.uk/artemis</a>.
 
 In the navigation bar at the top you have the following options:
 </p>
 
 <ul>
 <li>
-  <h4>Prd:</h4>
+  <h4>artemis:</h4>
   <p>
   Clicking this will navigate to the Open OnDemand (OOD) landing page.
   </p>
@@ -90,31 +93,31 @@ In the navigation bar at the top you have the following options:
 <li>
   <h4>Files:</h4>
   <p>
-  Opens a dropdown menu with links to access the files and folders in your attached storage/home directory on the HRC.
+  Opens a dropdown menu with links to access the files and folders in your attached storage/home/lustre directories on the HRC.
   </p>
 </li>
 <li>
   <h4>Jobs:</h4>
   <p>
-  Opens the Jobs dropdown which has navigatable links to the Active Jobs monitoring page, and the Jobs Composer - which allows you to craft batch jobs in the browser from templates and previous jobs.
+  Opens the Jobs dropdown which has navigable links to the Active Jobs monitoring page, and the Jobs Composer - which allows you to craft batch jobs in the browser from templates and previous jobs.
   </p>
 </li>
 <li>
   <h4>Clusters:</h4>
   <p>
-  Opens cluster selection dropdown. Access to the Login nodes commandline of the production or other project based clusters. (Currently only the production cluster)
+  Opens cluster selection dropdown. Access to the Login nodes commandline of the production or other project based clusters. (Currently only the production cluster - artemis)
   </p>
 </li>
 <li>
   <h4>Interacitve Apps:</h4>
   <p>
-  Opens the app selector. Currently has two options - Jupyter Notebooks and Remote Desktop (XFCE).
+  Opens the app selector. Currently has three options - Jupyter Notebooks and Remote Desktop (XFCE) and the DEV version of the Remote Desktop.
   </p>
 </li>
 <li>
   <h4>Monitoring:</h4>
   <p>
-  This will provide links to dashboard powered by Prometheus and Grafana. This can be used to monitor cluster usage, load, jobs, job resource consumtion, downtime etc. 
+  This will provide links to dashboard powered by Prometheus and Grafana. This can be used to monitor cluster usage, load, jobs, job resource consumption, downtime etc. 
   </p>
 </li>
 <li>
@@ -146,30 +149,30 @@ In the navigation bar at the top you have the following options:
 <img src="../../../images/sge-slurm/files-menu.PNG" />
 
 
-The Files menue allows exploration, edit, upload of files and folders into the HRC environment. 
+The Files menu allows exploration, edit, upload of files and folders into the HRC environment. 
 
-Currently only the workshop home directory and the software mounts will be available. 
+Currently you will have you home directory, and links to your lustre and lustre scratch spaces. 
 
-One the remote storage systems have been integrated, you will be able to access any mounted network drive, including Lustre.
+You can access any of the remote mounted storage from this page, by clicking "Change Directory".
 
 
 ### Files Excercises
 
    1. Workshop Working Directory:
 
-      As the workshop today is using a shared user account on Artemis - you will need to navigate to the `/home/<user>/RSE-TOP/` directory. 
+      Please make a directory in your home folder called "HPC-Workshop". This is so that an admin can find and locate the files during the workshop. 
     
-      1. Make a directory inside `/home/<user>/RSE-TOP/` which will be your work directory for the duration of the Workshop only. At the end of the Workshop you can download the folder if needed. We will refer to this directory as `workdir`.
+      1. Make a directory inside `/home/<user>/HPC-Workshop/` which will be your work directory for the duration of the Workshop only. At the end of the Workshop you can download the folder if needed. We will refer to this directory as the `workdir`.
 
       1. Navigate into your `workdir` and upload a **small** file from your desktop. 
 
-      1. Navigate back up to the `RSE-TOP` folder and click the checkbox next to your `workdir`. Now download. You should download a zip containing your uploaded file.
+      1. Navigate back up to the `HPC-Workshop` folder and click the checkbox next to your `workdir`. Now download. You should download a zip containing your uploaded file.
 
       1. Copy your current path using the `copy path` button. Now Change directory to the shared software directory `/mnt/shared`. 
 
-      1. Create a file `README.txt` in your workdir. Click the three dots next to your new file and edit. Write a brief explination of what the contents of this folder will contain for future reference. Don't forget to click save in the top-left.
+      1. Navigate back, and create a file `README.txt` in your workdir. Click the three dots next to your new file and edit. Write a brief explanation of what the contents of this folder will contain for future reference. Don't forget to click save in the top-left.
 
-      1. Change back to your `workdir` by pasting the copied path from earlier. Make two directories in your workdir `Jobs` and `Templates`. You might need these later to save your work after the workshop.
+      1.If you need to, navigate back to your `workdir` by pasting the copied path from earlier. Make two directories in your workdir `Jobs` and `Templates`. You might need these later to save your work after the workshop.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -209,17 +212,29 @@ One the remote storage systems have been integrated, you will be able to access 
 
     1. Using the `Clusters` dropdown - start an interactive shell session on one of the production cluster login nodes.
 
-        <img src="../../../images/sge-slurm/prd_shell.png"/>
+        <p align="centre">
+        <img src="../../../images/sge-slurm/prd_shell.png" align/>
+        </p>
 
-        You should now have a command line shell on one of the `prd-login-X` nodes.
+        You should now have a command line shell on one of the `artemis-login-0` nodes.
 
         <img src="../../../images/sge-slurm/shell.PNG" class="centre" />
 
-    2. Navigate to your `workdir`. 
+    2. Navigate to your `workdir`, using simple bash commands. Listing the directory should show 2 folders and 2 files. 
 
     3. Test out the `module` command and load a package. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+## Shell
+
+4. Artemis SSH Session
+
+    1. If you can, start a terminal on your computer (Xterm, Terminal, MobaXterm.. etc.). Using the `ssh` command, log into the Artemis login node.
+    2. Do you have any module not found or module not available errors? Why might this be? Check the documentation FAQs for what can cause this!
+    3. Using your shell, load a piece of software of your choosing. Use the `module list` command to view what packages have automatically been loaded for you.
+    4. Depending on the package you loaded, you might see 30 or more additional modules loaded for that software to work. Now see if you can find a software module which will load more than 200+ from a single load command. (Make sure to purge after each load to not conflict modules).
 
 
 ## Interactive Apps
@@ -230,7 +245,7 @@ This dropwdown provides access to one of the key tools that Open OnDemand will p
 
 ## Monitoring
 
-Provides Dashboards for project owners. Not for use during this Workshop.
+Provides Dashboards for project owners. Have an explore - but we won't be deep diving during this workshop.
 
 ## Summary
 
@@ -253,6 +268,7 @@ The rest of the exercises in this workshop will focus on the user of the Jobs an
     - Cluster
     - Interactive Apps
  - Accesing the Artemis Login Nodes via in Browser Shell
+ - Accesing the Artemis Login Nodes via in local terminal Shell
 
 
 
@@ -260,10 +276,10 @@ The rest of the exercises in this workshop will focus on the user of the Jobs an
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[contributors-url]: https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors
+[contributors-url]: https://github.com/universityofsussex-rc/Workshops/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[forks-url]: https://github.com/universityofsussex-its/RC-Workshops/network/members
+[forks-url]: https://github.com/universityofsussex-rc/Workshops/network/members
 [stars-shield]: https://img.shields.io/github/stars/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[stars-url]: https://github.com/universityofsussex-its/RC-Workshops/stargazers
+[stars-url]: https://github.com/universityofsussex-rc/Workshops/stargazers
 [issues-shield]: https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[issues-url]: https://github.com/universityofsussex-its/RC-Workshops/issues
+[issues-url]: https://github.com/universityofsussex-rc/Workshops/issues

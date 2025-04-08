@@ -1,0 +1,24 @@
+#!/bin/bash 
+############################################################
+#  This is an example jobscript for running on the Artemis 
+#  Slurm HPC. This asks for 1 core and 4GB of RAM
+############################################################
+# Name of your job
+#SBATCH -J Basic_batch
+#SBATCH -o basic_batch."%j".out
+#SBATCH -e basic_batch."%j".err
+
+#Slurm Email Job Status
+#SBATCH --mail-user $USER@sussex.ac.uk
+#SBATCH --mail-type=ALL
+
+#Request 5 hours run time
+#SBATCH -t 5:0:0
+
+#SBATCH --mem=4G
+#SBATCH -p general
+
+# Load the proxy for internet access
+module load proxy
+
+echo "I did the thing"

@@ -17,7 +17,7 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-its/RC-Workshops">
+  <a href="https://github.com/universityofsussex-rc/Workshops">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,7 +25,7 @@
   <p align="center">
     This second set of exercise will get you logged into the Open OnDemand Web Portal and exploring.
   </p>
-    <a href="https://github.com/universityofsussex-its/RC-Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -50,7 +50,7 @@ Exercises:
 
 1. Navigate to the Job Composer. 
     
-    Depending on the progress of other attendees you will see the default two jobs, and potentially some other users job scripts.
+    Depending on your history on the cluster, you might already see some jobs templates, or other scripts already available.
 
 2. Navigating to Templates
 
@@ -71,21 +71,31 @@ In this section the exercises will take you through the job composer and the use
 
 3. Create a new job.
 
-    From the `New Job` dropdown button - select "From Template". This will navigate you to the "Templates" tab.
+    From the `New Job` dropdown button - select "From Template". This will navigate you to the "Templates" tab. You can also click the top nav bar.
 
-    Click/Select the `RES-Workshop-Empty` Template - which should show on the right under Job Name.
+    1. Click `Copy Template` - and in the top box - put `/mnt/shared/public/workshops/HPC-Workshop/exercise2/templates/artemis_empty` to copy the template from.
 
-    Rename the job to something unique and easy for you to find in a list. Your Sussex username is Suggested. eg. `<username>-Empty`.
+    I will refer to this as `Workshop-Empty` so it might be helpful to name it as such. 
 
-    Click `Create New Job`.
+    Click Save.
+
+    In your list now, you should have a new
+    Click/Select the `Workshop-Empty` Template - which should show on the right under "Name" column.
+
+1.  Create a New Batch Job
+    
+    Select you `Workshop-Empty` template, and then Click `Create New Job`.
 
     You should now be back on the Jobs page instead of templates. with a new job with its details highlighted on the right.
 
     You should be able to see that the folder contains a single job file, which is empty beside a print statement.
+
 1. Submit a Job
+
     Run your new job by selecting it in the list of jobs (you might need to use the search bar) and clicking "Submit".
 
-    If the Queue is busy - its will change status to queues. 
+    If the Queue is busy - its will change status to queued.
+
     It should run almost instantaneously and be marked as Completed.
 
 1. Check Job Results
@@ -102,7 +112,7 @@ In this section the exercises will take you through the job composer and the use
 
     Click the `main_job.sh` file to begin editing it.
 
-    Please, either using slides, google or the cheat sheat, set the SBATCH job headers to complete the following job. 
+    Please, either using slides, google or the cheat sheet, set the SBATCH job headers to complete the following job. 
     
     - `general` Partition.
     - Request one CPU.
@@ -115,7 +125,9 @@ In this section the exercises will take you through the job composer and the use
     - Outputs the jobnumber from the environment variable.
     
 
-    If you get stuck - check the other default templates for ideas.
+    If you get stuck - `/mnt/shared/public/workshops/HPC-Workshop/exercise2/templates/` contains more templates you can view.
+
+    And solutions are the same place but `solutions` instead of `templates`.
 
     Submit the job to check your results.
 
@@ -129,9 +141,9 @@ In this section the exercises will take you through the job composer and the use
 
     This menu will allow you to:
     - Rename your Job
-    - Change submit Cluster (You only have prd available)
+    - Change submit Cluster (You only have artemis available)
     - Change the Job Script Submitted
-    - Set the account (not needed)
+    - Set the account (if you belong to multiple schools or specific research groups)
     - Set the array args
     - Copy your submit environment
 
@@ -150,23 +162,23 @@ In this section the exercises will take you through the job composer and the use
 
 This section you will create jobs from default templates and attempt to repair/convert them, or design them from scratch. Each exercise will have a number of errors and a description of what the template was meant to do. 
 
-Each Exercise should start by you creating a new job from the template, copying the default job script into a new script and correcting issues.
+Each Exercise should start by you creating a new job from the template (path: `/mnt/shared/public/workshops/HPC-Workshop/exercise2/templates/`), copying the default job script into a new script and correcting issues.
 
 8. SGE to SLURM SMP
 
-    - Template: `SGE-SLURM-OpenMP`
+    - Template: `slurm_openmp`
     - Description:
         A simple multithread python execution
 
 1. SGE to SLURM MPI
 
-    - Template: `SGE-SLURM-MPI`
+    - Template: `slurm_mpi`
     - Description: A Simple 2 proc MPI job.
 
 
 1. No Route
     
-    - Template: `SGE-SLURM-wget`
+    - Template: `slurm_wget`
     - Description: A simple Job to fetch some files from the web.
 
         <details>
@@ -177,18 +189,27 @@ Each Exercise should start by you creating a new job from the template, copying 
 
         </details>
 
+1. Slurm Arrays
+    - Template: `slurm_array`
+    - Description: A simple use of slurm array syntax. This is a MUST for good "HPC Citizen" behaviour on the cluster. If you need more than 10 jobs of the same type, use an array job to pull the args from a file to run. You'll also learn how to limit concurrency so that your array jobs don't abuse the schedular... 
+
 1. Convert existing Apollo2 Script
 
-    - Template: `SLURM-Bugged`
-    - Description: This script is already in SLURM format - however there are a number of errors which will prevent it from running, which are mistakes likely to be made when intitally switching from SGE to SLURM. This script should load the default Python version and then attempt to install to you `workdir` the python module `numpy`.
+    - Template: `slurm_bugged`
+    - Description: This script is already in SLURM format - however there are a number of errors which will prevent it from running, which are mistakes likely to be made when intitally switching from SGE to SLURM; as well as some simple errors we often see. This script should load the default Python version and then attempt to install to you `workdir` the python module `numpy`.
+
+
+1. Using GPUs
+    - Template: `slurm_gpu`
+    - Description: A simple slurm script which will attach a GPU to your job for use with nvidia commands and GPU based workloads. This will give you the basics of connecting a GPU, how to view its details, and the syntax for more complex tasks.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Saving Your Work
 
-Please now open your jobs directoires which you have created and copy them over to your `workdir` your created in the previous Exercise Sheet.
+Please now open your jobs directories which you have created and copy them over to your `workdir` your created in the previous Exercise Sheet.
 
-When you delete a job in the Job Composer - it wipes the directory, job script and all results contained within.
+When you delete a job in the Job Composer - it wipes the directory, job script and all results contained within. This is why it is good to make a copy of scripts either in your home directory, or to make templates out of them!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -204,10 +225,12 @@ These series of exercises should have familiarsed yourself with the following:
     - Reviewing
     - Job Options
     - Saving
-- SGE to Slurm Conversions
+- Slurm Job Types
     - SMP or Open MP Jobs
     - Open MPI and the ease of Ranks/node
     - Proxies and the changes in default behaviour
+- SGE to SLURM inherited Errors
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -216,10 +239,10 @@ These series of exercises should have familiarsed yourself with the following:
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[contributors-url]: https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors
+[contributors-url]: https://github.com/universityofsussex-rc/Workshops/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[forks-url]: https://github.com/universityofsussex-its/RC-Workshops/network/members
+[forks-url]: https://github.com/universityofsussex-rc/Workshops/network/members
 [stars-shield]: https://img.shields.io/github/stars/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[stars-url]: https://github.com/universityofsussex-its/RC-Workshops/stargazers
+[stars-url]: https://github.com/universityofsussex-rc/Workshops/stargazers
 [issues-shield]: https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[issues-url]: https://github.com/universityofsussex-its/RC-Workshops/issues
+[issues-url]: https://github.com/universityofsussex-rc/Workshops/issues

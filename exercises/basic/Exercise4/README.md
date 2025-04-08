@@ -17,7 +17,7 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-its/RC-Workshops">
+  <a href="https://github.com/universityofsussex-rc/Workshops">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,7 +25,7 @@
   <p align="center">
     This set of exercises are designed to introduce you to array jobs. These are when you need to process a large number of objects/timesteps or sequences of data that will use the same pipeline but will vary with input parameters or filenames.
   </p>
-    <a href="https://github.com/universityofsussex-its/RC-Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -148,10 +148,10 @@ Run both jobs such that the first task of the array job waits for the first batc
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[contributors-url]: https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors
+[contributors-url]: https://github.com/universityofsussex-rc/Workshops/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[forks-url]: https://github.com/universityofsussex-its/RC-Workshops/network/members
+[forks-url]: https://github.com/universityofsussex-rc/Workshops/network/members
 [stars-shield]: https://img.shields.io/github/stars/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[stars-url]: https://github.com/universityofsussex-its/RC-Workshops/stargazers
+[stars-url]: https://github.com/universityofsussex-rc/Workshops/stargazers
 [issues-shield]: https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[issues-url]: https://github.com/universityofsussex-its/RC-Workshops/issues
+[issues-url]: https://github.com/universityofsussex-rc/Workshops/issues

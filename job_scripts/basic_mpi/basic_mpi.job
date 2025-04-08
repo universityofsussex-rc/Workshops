@@ -1,0 +1,38 @@
+#!/bin/bash -x
+############################################################
+#  This is an example jobscript for running on the Artemis 
+#  Slurm HPC. This asks for 1 core and 4GB of RAM
+############################################################
+# Name of your job
+#SBATCH -J basic_mpi
+#SBATCH -o %x.%j.o 
+#SBATCH -e %x.%j.e 
+#SBATCH --time=1:00:00 
+
+#Slurm Email Job Status
+#SBATCH --mail-user $USER@sussex.ac.uk
+#SBATCH --mail-type=ALL
+
+#Request 1 hours run time
+#SBATCH -t 1:0:0
+
+#SBATCH --mem=4G
+#SBATCH -p gpu
+
+# Add MPI request
+#SBATCH -n 6 
+
+# Load the proxy for internet access
+module load proxy
+
+# We need to load the MPI lib
+module load OpenMPI
+
+# A healthy check we dump the environmnet for debugging - comment when doing tested runs.
+env
+
+# Make sure to also copy the Makefile and c file.
+make basic_mpi
+
+# EXE='./basic_mpi'
+# srun $EXE

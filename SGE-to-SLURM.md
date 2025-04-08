@@ -18,12 +18,12 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-its/RC-Workshops">
+  <a href="https://github.com/universityofsussex-rc/Workshops">
     <img src="./images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">SGE to SLURM CHEAT SHEET</h3>
-    <a href="https://github.com/universityofsussex-its/RC-Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 

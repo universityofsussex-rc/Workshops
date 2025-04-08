@@ -17,7 +17,7 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-its/RC-Workshops">
+  <a href="https://github.com/universityofsussex-rc/Workshops">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,7 +25,7 @@
   <p align="center">
     This third set of exercise will get you logged into the Open OnDemand Web Portal and exploring the Interactive Applications.
   </p>
-    <a href="https://github.com/universityofsussex-its/RC-Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -46,16 +46,16 @@ These first 4 were the most numerous service requests the team has received in t
 
 We hope to expand these services out as demand and the Research Teams skills develop.
 
-NOTE: We are not sure how well the system will handle multiple people using the same account for remote-desktop applications... Have patience and flag an Instructor if you run into weirdness!
-
 
 ## Remote Desktop
 
-This service will replace the extremely old and deprecated Exceed OnDemand client and server. This was primarily used for Graphical rendoring and we expect the XFCE Remote Desktop App to be used in a similar way.
+This service will replace the extremely old and deprecated Exceed OnDemand client and server. This was primarily used for Graphical rendering and we expect the XFCE Remote Desktop App to be used in a similar way.
 
-We do not invisage Artemis being used as a permenant Desktop for users, as we do not have the capacity or the storage to provide that kind of service... yet :D
+We do not envisage Artemis being used as a permanent "Desktop" for users, as we do not have the capacity or the storage to provide that kind of service... yet :D
 
-This service is expected to be used with 3D rendering software used in Chemistry, FSLeyes in Neuro etc. Interactive, 3D GUI.
+This service is expected to be used with 3D rendering software used in Chemistry, FSLeyes in Neuro etc. Interactive, 3D GUI. 
+
+Its the "Clicky Button" or "Pretty IDE space" for users to use. 
 
 If theres is a "Desktop Application" software you'd like as basic - you would request it via the usual Service Request - ITS HELP portal.
 
@@ -65,7 +65,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     If you aren't already on it, you'll need to navigate back to the Dashboard.
 
-    Select Interactive Apps -> Desktop -> Remote Desktop.
+    Select Interactive Apps -> Desktop -> DEV-Remote Desktop.
 
     You should see a page like this:
 
@@ -73,7 +73,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     Do not change these options for this exercise.
 
-    You can also navigate to this page by clicking the <img src="../../../images/sge-slurm/ts-icon.PNG" width="30px"/> Icon -> Remote Desktop:
+    You can also navigate to this page by clicking the <img src="../../../images/sge-slurm/ts-icon.PNG" width="30px"/> Icon -> DEV-Remote Desktop:
 
 
     Click Launch.
@@ -119,15 +119,47 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     You can resume right where you left off by re-launching the connection from your Interactive Applications page.
 
-    You can permenantly end the session by clicking your Username -> Logout.
+    You can permanently end the session by clicking your Username -> Logout.
 
     This will eventually complete the Remote Desktop Job and should look like:
 
+    <p align="centre">
     <img src="../../../images/sge-slurm/xfce-complete.PNG"/>
+    </p>
 
     If you want to re-launch it because you closed it by mistake simply click the relaunch button <img src="../../../images/sge-slurm/xfce-relaunch.PNG" width="40px"/>.
 
     If you want to clear the job - click delete - otherwise it will be cleared automatically in 6 days.
+
+4. Due to popular demand you can also run VS-Code from here. We do not allow remote execution of VS-code onto the Artemis cluster. This is due to filespace issues and accidental copilot runs...
+
+    Start a terminal.
+
+    Run `module load code-server`
+
+    This is a specifically built clone of VScode that will start a webserver version of it for you on the HPC, in the remote desktop.
+
+    Run the code server with the command: `code-server`. We suggest you close this down immediately and go and edit your config directory which is has now 
+    created for you under: `/its/home/<username>/.config/code-server/config.yaml
+
+    ```
+    bind-addr: 127.0.0.1:8080
+    auth: password
+    password: <randomly-generated-password>
+    cert: false
+    ```
+
+    We would recommend changing the top bind port to something which wont clash with another user. (From the default). And setting the password to something you can remember but which is <strong>NOT</strong> your ITS password...
+
+    Now restart code-server in your shell, and click the browser icon.
+
+    Navigate to `localhost:8080` and type in your password (note it probably isnt 8080 anymore).
+
+    Voila. It should look something like:
+
+    <p align="centre">
+    <img src="../../../images/sge-slurm/code-server.PNG>
+    </p>
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -135,9 +167,9 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
 ## Jupyter Notebook
 
-If you are not familair with Python - do not worry - we are just using Jupyter as an example for custom envs which R etc can be used with as well.
+If you are not familiar with Python - do not worry - we are just using Jupyter as an example for custom envs which R etc can be used with as well.
 
-If you are not familair - Jupyter is a development environment with run-time execution via "Cells" (json objects for the front-end devs in the room). They also provide a Markdown syntax and PDF export - making them rather useful for new coders, and report generators. 
+If you are not familiar - Jupyter is a development environment with run-time execution via "Cells" (json objects for the front-end devs in the room). They also provide a Markdown syntax and PDF export - making them rather useful for new coders, and report generators. 
 
 ### Starting the Notebook
 
@@ -173,7 +205,7 @@ If you are not familair - Jupyter is a development environment with run-time exe
 
     No port forwarding
 
-    No hanging ports from before because Macs don't turn off properly and now its a headace...
+    No hanging ports from before because Macs don't turn off properly and now its a headache...
 
     Simples.
 
@@ -196,12 +228,28 @@ If you are not familair - Jupyter is a development environment with run-time exe
     <img src="../../../images/sge-slurm/jupyter-save.PNG"/>
 
 
+4. Dont forget that for custom environments pending the App being enhanced, you can use the remote desktop to launch Jupyter Notebooks.
+
+    If you already have a python environment setup - log back into your remote desktop and start the jupyter session there. 
+
+    You can navigate to the jupyter app using the browser like with code-server.
+
+    If not - quickly run in a shell, following the prompts:
+
+    ```
+    module load Anaconda3/2022.10
+    module load proxy/public
+    conda init
+    conda create --name jupyter-env python=3.11 jupyter ipython numpy scipy
+    conda activate jupyter-env
+    jupyter notebook
+    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Creating A Custom Kernel
 
-One of the important difference between the Artemis HRC Jupyter Notebooks and your laptop is version maintence. We will be updating the App, packages and libraries. 
+One of the important difference between the Artemis HRC Jupyter Notebooks and your laptop is version maintenance. We will be updating the App, packages and libraries. 
 
 This WILL break code.
 
@@ -210,7 +258,8 @@ You should always rely on your own environment or a module loaded by the `module
 
 |  ⚠️ Warning ⚠️  |
 | :-----------: |
-| **IMPORTANT:** Do not do these steps to create a Kernel today - these are for when you have your own user account. These steps were already performed for you.<br/> Have a read through and then continue from Connecting your kernel. |
+| **IMPORTANT:** You do not need to do these steps today. Creating a kernel from scratch can take time - and based on bandwidth, might take 20m or more for your
+own research purposes. This is hear to go through the basics of how to create a kernel to use.
 
 
 4. Start a Compute Session
@@ -223,9 +272,9 @@ You should always rely on your own environment or a module loaded by the `module
 
 5. Init Conda and Create Env
 
-    This is pretty much step by step to create your own Python environment on the HRC. Again - Dont actually run this.
+    This is pretty much step by step to create your own Python environment on the HRC. Again - You dont have to actually run this.
 
-    - `module load Anaconda3/2024.02-1`
+    - `module load Anaconda3/2022.10`
     - `conda init`
     - `module load proxy/public`
     - `conda create -y --name Py3.10-Python numpy scipy jupyter ipython`
@@ -295,11 +344,11 @@ Or if you have started multiple notebook - you might need to clean up your envir
 
 These exercise are designed to push your current understanding of the Artemis HRC and the Open OnDemand Web Portal.
 
-If you want to you can just stop here and come back to these when the service is fully deployed.
+You'll need to think about what resources you request when submitting these jobs. Particularly what happens with and without enough of a specific resource. 
 
 1. GPU
 
-    Run an interactive session and attach a single gpu. The SGE-to-SLURM page will aid with this - but you might need to make use of the slurm commands to search the config to do this. 
+    Run an interactive session and attach a single gpu. The Apollo2 to Artemis docs page will aid with this - but you might need to make use of the slurm commands to search the config to do this. 
 
     Task: `Python GPU`
 
@@ -311,7 +360,7 @@ If you want to you can just stop here and come back to these when the service is
     Description: Clone "https://github.com/ekondis/mixbench" and compile, build and test the sessions GPU and CPU.
 
 
-(More to be added for full launch)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -342,10 +391,10 @@ You should also feel comfortable:
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[contributors-url]: https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors
+[contributors-url]: https://github.com/universityofsussex-rc/Workshops/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[forks-url]: https://github.com/universityofsussex-its/RC-Workshops/network/members
+[forks-url]: https://github.com/universityofsussex-rc/Workshops/network/members
 [stars-shield]: https://img.shields.io/github/stars/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[stars-url]: https://github.com/universityofsussex-its/RC-Workshops/stargazers
+[stars-url]: https://github.com/universityofsussex-rc/Workshops/stargazers
 [issues-shield]: https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
-[issues-url]: https://github.com/universityofsussex-its/RC-Workshops/issues
+[issues-url]: https://github.com/universityofsussex-rc/Workshops/issues
