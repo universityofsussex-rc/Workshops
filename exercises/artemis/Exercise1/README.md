@@ -147,8 +147,9 @@ In the navigation bar at the top you have the following options:
 
 ## Files
 
+<p align="centre">
 <img src="../../../images/sge-slurm/files-menu.PNG" />
-
+</p>
 
 The Files menu allows exploration, edit, upload of files and folders into the HRC environment. 
 
@@ -186,7 +187,9 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
         You should see somthing like:
 
+        <p align="centre">
         <img src="../../../images/sge-slurm/active-jobs.PNG"/>
+        </p>
 
         This page lists any active job in the queue, with selection for each cluster, and allows the user some basic filter options. Depending on the current progress of other users in the Workshop - you may or may not see some jobs active.
 
@@ -194,13 +197,15 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
         This will either redirect or open a new tab and you should see a page similar to:
 
+        <p align="centre">
         <img src="../../../images/sge-slurm/jobs-composer.PNG"/>
-
+        </p>
 
     3. Navigate in the new grey navigation menu to `Templates` - again you should see something similar to:
 
+        <p align="centre">
         <img src="../../../images/sge-slurm/jobs-templates.png"/>
-
+        </p>
 
     4. Either close the tab, or click the `Open OnDemand` in the top right to navigate back to the Dashboard.
 
@@ -219,11 +224,18 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
         You should now have a command line shell on one of the `artemis-login-0` nodes.
 
+        <p align="centre">
         <img src="../../../images/sge-slurm/shell.PNG" class="centre" />
+        </p>
 
     2. Navigate to your `workdir`, using simple bash commands. Listing the directory should show 2 folders and 2 files. 
 
     3. Test out the `module` command and load a package. 
+
+|  ⚠️ Warning ⚠️  |
+| :-----------: |
+| **IMPORTANT:** Some browsers like Google Chrome will force a tab into the background while you are not actively using it - these causes the shell session to
+ terminate early. You can change this is setting, or start a `screen` or `tmux` session and just refresh the shell page to resume. |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -240,9 +252,11 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
 ## Interactive Apps
 
-This dropwdown provides access to one of the key tools that Open OnDemand will provide that was lacking in the Apollo2 HPC. Currently available are a Remote-Desktop tool provided by XFCE and a Jupyter Notebook server.
+This dropdown provides access to one of the key tools that Open OnDemand will provide that was lacking in the Apollo2 HPC. Currently available are a Remote-Desktop tool provided by XFCE and a Jupyter Notebook server.
 
+<p align="centre">
 <img src="../../../images/sge-slurm/dd-interactive-apps.PNG"/>
+</p>
 
 ## Monitoring
 
