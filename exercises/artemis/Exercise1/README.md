@@ -74,7 +74,7 @@ bash-4.2$ ssh anon123@ood.artemis.hrc.sussex.ac.uk
 <p>
 The landing page should look like:
 </p>
-<p align="centre">
+<p align="center">
 <img src="../../../images/sge-slurm/ood-splash.PNG"/>
 </p>
 <p>
@@ -147,7 +147,7 @@ In the navigation bar at the top you have the following options:
 
 ## Files
 
-<p align="centre">
+<p align="center">
 <img src="../../../images/sge-slurm/files-menu.PNG" />
 </p>
 
@@ -187,7 +187,7 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
         You should see somthing like:
 
-        <p align="centre">
+        <p align="center">
         <img src="../../../images/sge-slurm/active-jobs.PNG"/>
         </p>
 
@@ -197,13 +197,13 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
         This will either redirect or open a new tab and you should see a page similar to:
 
-        <p align="centre">
+        <p align="center">
         <img src="../../../images/sge-slurm/jobs-composer.PNG"/>
         </p>
 
     3. Navigate in the new grey navigation menu to `Templates` - again you should see something similar to:
 
-        <p align="centre">
+        <p align="center">
         <img src="../../../images/sge-slurm/jobs-templates.png"/>
         </p>
 
@@ -218,13 +218,13 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
     1. Using the `Clusters` dropdown - start an interactive shell session on one of the production cluster login nodes.
 
-        <p align="centre">
+        <p align="center">
         <img src="../../../images/sge-slurm/prd_shell.png" align/>
         </p>
 
         You should now have a command line shell on one of the `artemis-login-0` nodes.
 
-        <p align="centre">
+        <p align="center">
         <img src="../../../images/sge-slurm/shell.PNG" class="centre" />
         </p>
 
@@ -234,8 +234,7 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
 |  ⚠️ Warning ⚠️  |
 | :-----------: |
-| **IMPORTANT:** Some browsers like Google Chrome will force a tab into the background while you are not actively using it - these causes the shell session to
- terminate early. You can change this is setting, or start a `screen` or `tmux` session and just refresh the shell page to resume. |
+| **IMPORTANT:** Some browsers like Google Chrome will force a tab into the background while you are not actively using it - these causes the shell session to  terminate early. You can change this is setting, or start a `screen` or `tmux` session and just refresh the shell page to resume. |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -254,7 +253,7 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 
 This dropdown provides access to one of the key tools that Open OnDemand will provide that was lacking in the Apollo2 HPC. Currently available are a Remote-Desktop tool provided by XFCE and a Jupyter Notebook server.
 
-<p align="centre">
+<p align="center">
 <img src="../../../images/sge-slurm/dd-interactive-apps.PNG"/>
 </p>
 

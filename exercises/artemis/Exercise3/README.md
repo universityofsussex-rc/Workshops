@@ -123,7 +123,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     This will eventually complete the Remote Desktop Job and should look like:
 
-    <p align="centre">
+    <p align="center">
     <img src="../../../images/sge-slurm/xfce-complete.PNG"/>
     </p>
 
@@ -157,7 +157,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     Voila. It should look something like:
 
-    <p align="centre">
+    <p align="center">
     <img src="../../../images/sge-slurm/code-server.PNG>
     </p>
 
@@ -259,7 +259,7 @@ You should always rely on your own environment or a module loaded by the `module
 |  ⚠️ Warning ⚠️  |
 | :-----------: |
 | **IMPORTANT:** You do not need to do these steps today. Creating a kernel from scratch can take time - and based on bandwidth, might take 20m or more for your
-own research purposes. This is hear to go through the basics of how to create a kernel to use.
+own research purposes. This is hear to go through the basics of how to create a kernel to use. |
 
 
 4. Start a Compute Session
