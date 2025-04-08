@@ -73,7 +73,7 @@ In this section the exercises will take you through the job composer and the use
 
     From the `New Job` dropdown button - select "From Template". This will navigate you to the "Templates" tab. You can also click the top nav bar.
 
-    1. Click `Copy Template` - and in the top box - put `/mnt/shared/public/workshops/HPC-Workshop/exercise2/templates/artemis_empty` to copy the template from.
+    Click `Copy Template` - and in the top box - put `/mnt/shared/public/workshops/HPC-Workshop/exercise2/templates/artemis_empty` to copy the template from.
 
     I will refer to this as `Workshop-Empty` so it might be helpful to name it as such. 
 
@@ -84,7 +84,7 @@ In this section the exercises will take you through the job composer and the use
 
 1.  Create a New Batch Job
     
-    Select you `Workshop-Empty` template, and then Click `Create New Job`.
+    Select your `Workshop-Empty` template, and then Click `Create New Job`.
 
     You should now be back on the Jobs page instead of templates. with a new job with its details highlighted on the right.
 
@@ -112,12 +112,12 @@ In this section the exercises will take you through the job composer and the use
 
     Click the `main_job.sh` file to begin editing it.
 
-    Please, either using slides, google or the cheat sheet, set the SBATCH job headers to complete the following job. 
+    Please, either using the <a href="https:artemis-docs.hpc.sussex.ac.uk/artemis">documentation</a>, the slides, google or the cheat sheet, set the SBATCH job headers to complete the following job. 
     
     - `general` Partition.
     - Request one CPU.
     - `250mb` of total RAM
-    - No Mailing Options
+    - Explicitly show No Mailing Options
     - Max runtime of 5 minutes
     - One file for stdout and another stderror with the following naming format:
         - `jobname-<jobid>.<out,err>`
@@ -164,13 +164,13 @@ This section you will create jobs from default templates and attempt to repair/c
 
 Each Exercise should start by you creating a new job from the template (path: `/mnt/shared/public/workshops/HPC-Workshop/exercise2/templates/`), copying the default job script into a new script and correcting issues.
 
-8. SGE to SLURM SMP
+8. SLURM SMP
 
     - Template: `slurm_openmp`
     - Description:
         A simple multithread python execution
 
-1. SGE to SLURM MPI
+1. SLURM MPI
 
     - Template: `slurm_mpi`
     - Description: A Simple 2 proc MPI job.
@@ -193,10 +193,10 @@ Each Exercise should start by you creating a new job from the template (path: `/
     - Template: `slurm_array`
     - Description: A simple use of slurm array syntax. This is a MUST for good "HPC Citizen" behaviour on the cluster. If you need more than 10 jobs of the same type, use an array job to pull the args from a file to run. You'll also learn how to limit concurrency so that your array jobs don't abuse the schedular... 
 
-1. Convert existing Apollo2 Script
+1. Convert an inherited Apollo2 script
 
     - Template: `slurm_bugged`
-    - Description: This script is already in SLURM format - however there are a number of errors which will prevent it from running, which are mistakes likely to be made when intitally switching from SGE to SLURM; as well as some simple errors we often see. This script should load the default Python version and then attempt to install to you `workdir` the python module `numpy`.
+    - Description: This script is already in SLURM format - however there are a number of errors which will prevent it from running, which are mistakes likely to be made when intitally switching from SGE to SLURM; as well as some simple errors we often see. This script should load a non default Python version and then attempt to install to you `workdir` the python module `numpy`.
 
 
 1. Using GPUs

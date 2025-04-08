@@ -68,10 +68,12 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     Select Interactive Apps -> Desktop -> DEV-Remote Desktop.
 
     You should see a page like this:
-
+    
+    <p align="center">
     <img src="../../../images/sge-slurm/xfce-rdp.PNG"/>
-
-    Do not change these options for this exercise.
+    </p>
+    
+    Do not change these options for this exercise. If your default are different, please set them as above. If you say A40 for GPU - please be aware it might take some time to queue - consider turning this to no for now (it wont really be needed, but gives an example of an environment with one)
 
     You can also navigate to this page by clicking the <img src="../../../images/sge-slurm/ts-icon.PNG" width="30px"/> Icon -> DEV-Remote Desktop:
 
@@ -80,15 +82,19 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     You should now have something that looks like this:
 
+    <p align="center">
     <img src="../../../images/sge-slurm/xfce-starting.PNG"/>
+    </p>
 
     Once this completes and the job starts you should get something like this:
 
+    <p align="center">
     <img src="../../../images/sge-slurm/xfce-started.PNG"/>
+    </p>
 
     If you're internet runs at the speed of a sloth in high winds after a night out in Revenge, you can increase the compression and decrease the Image Quality to reduce the network bandwidth and letnecy.
 
-    Additionally, if working remotely from your supervisor or collegue, you can share a View Only link that would allow them to see your activity.
+    Additionally, if working remotely from your supervisor or colleague, you can share a View Only link that would allow them to see your activity.
 
     Click Launch Remote Desktop.
 
@@ -98,7 +104,9 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     Once the Remote Desktop has loaded you should have something like this (depending on what your conference friends have done to the desktop so far).
 
-     <img src="../../../images/sge-slurm/xfce-desktop.PNG"/>
+    <p align="center">
+    <img src="../../../images/sge-slurm/xfce-desktop.PNG"/>
+    </p>
 
     Play Around.
 
@@ -109,9 +117,11 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     - Terminal - Pay attention to where you start (hostname)
     - Environment Variables
     - Software
-    - Explore the Settings on the Left-Hand-Side Pop-tab.
+    - Explore the Settings on the Left-Hand-Side Pop-tab. (Especially how the clipboard works with mac!)
 
-        <img src="../../../images/sge-slurm/xfce-poptab.PNG"/>
+    <p align="center">
+    <img src="../../../images/sge-slurm/xfce-poptab.PNG"/>
+    </p>
     
 3. Disconnecting or Ending Session
 
@@ -158,7 +168,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     Voila. It should look something like:
 
     <p align="center">
-    <img src="../../../images/sge-slurm/code-server.PNG>
+    <img src="../../../images/sge-slurm/code-server.PNG">
     </p>
 
 
@@ -181,13 +191,17 @@ If you are not familiar - Jupyter is a development environment with run-time exe
 
     You should have something like this:
     
+    <p align="center">
     <img src="../../../images/sge-slurm/jupyter-launch.PNG"/>
+    </p>
 
     Dont worry about the `FOO`, the Jupyter Service was recently being played with by the coolest research computing team member... 👀 
 
     For now - don't change anything and click Launch - you should have the screen show:
 
+    <p align="center">
     <img src="../../../images/sge-slurm/jupyter-starting.PNG"/>
+    </p>
 
     Which hopefully looks familiar from the Remote Desktop Launch.
 
@@ -195,7 +209,9 @@ If you are not familiar - Jupyter is a development environment with run-time exe
 
     Eventually the screen should look like:
 
+    <p align="center">
     <img src="../../../images/sge-slurm/jupyter-running.png"/>
+    </p>
 
 2. Connecting to the Jupyter Notebook
 
@@ -211,7 +227,9 @@ If you are not familiar - Jupyter is a development environment with run-time exe
 
     You should have something that looks like:
 
+    <p align="center">
     <img src="../../../images/sge-slurm/jupyter-top.PNG"/>
+    </p>
 
 3. Create a Notebook
 
@@ -225,10 +243,11 @@ If you are not familiar - Jupyter is a development environment with run-time exe
 
     To Rename the notebook file click `Untitled` and you'll have a prompt appear to rename it to something useful. Please do so to avoid conflicts.
 
+    <p align="center">
     <img src="../../../images/sge-slurm/jupyter-save.PNG"/>
+    </p>
 
-
-4. Dont forget that for custom environments pending the App being enhanced, you can use the remote desktop to launch Jupyter Notebooks.
+4. Don't forget that for custom environments pending the App being enhanced, you can use the remote desktop to launch Jupyter Notebooks.
 
     If you already have a python environment setup - log back into your remote desktop and start the jupyter session there. 
 
@@ -258,8 +277,7 @@ You should always rely on your own environment or a module loaded by the `module
 
 |  ⚠️ Warning ⚠️  |
 | :-----------: |
-| **IMPORTANT:** You do not need to do these steps today. Creating a kernel from scratch can take time - and based on bandwidth, might take 20m or more for your
-own research purposes. This is hear to go through the basics of how to create a kernel to use. |
+| **IMPORTANT:** You do not need to do these steps today. Creating a kernel from scratch can take time - and based on bandwidth, might take 20m or more for your own research purposes. This is hear to go through the basics of how to create a kernel to use. |
 
 
 4. Start a Compute Session
