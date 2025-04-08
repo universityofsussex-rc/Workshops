@@ -71,11 +71,12 @@ bash-4.2$ ssh anon123@ood.artemis.hrc.sussex.ac.uk
 ```
 
 ## Landing Page
-
 <p>
 The landing page should look like:
 </p>
-<img src="../../../images/sge-slurm/ood-splash.png"/>
+<p align="centre">
+<img src="../../../images/sge-slurm/ood-splash.PNG"/>
+</p>
 <p>
 
 This page will display various message of the day, will have common apps and services pinned to the bar, and have navigation links to our documentation site <a href="https://artemis-docs.hrc.sussex.ac.uk/artemis">https://artemis-docs.hrc.sussex.ac.uk/artemis</a>.
