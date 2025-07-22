@@ -132,24 +132,23 @@ If you get banned from the login node due to weird activity trying to login (or 
 
 ## Basic Bash
 
-<ol>
-<li><h3> man Command</h3></li>
+### man Command
 
-  One of the most usefull tools available for figuring out bash and other commands while you are on the HPC is the `man` command. This will bring up a text manual for whichever command you want to check. You may never stop using it, even after 10 years... It is very handy when you have forgotten which way around arguments go for a given command. 
+  One of the most usefull tools available for figuring out bash and other commands while you are on the HPC is the ``man`` command. This will bring up a text manual for whichever command you want to check. You may never stop using it, even after 10 years... It is very handy when you have forgotten which way around arguments go for a given command. 
 
   This exercise will use a number of commands, which you should first check with the man command to figure out how to use it. 
 
-  This first question requires you to use the `man` command on the `ls` or list function for a directory.
+  This first question requires you to use the ``man`` command on the ``ls`` or list function for a directory.
 
-  ```bash
-    man ls
-  ```
+```bash
+  man ls
+```
 
-<li><h3> List your home directory</h3></li>
+### List your home directory
 
-   So assuming you havent already moved about - you should be in your home directory - you can check this with the "print working directory command" `pwd`.
+   So assuming you havent already moved about - you should be in your home directory - you can check this with the "print working directory command" ``pwd``.
 
-   Having now viewed the manual for `ls` command, please list your home directory with the following flags:
+   Having now viewed the manual for ``ls`` command, please list your home directory with the following flags:
    <ul>
      <li>human-readable</li>
      <li>long listing format</li>
@@ -157,49 +156,49 @@ If you get banned from the login node due to weird activity trying to login (or 
      <li>Sort by modification time, newest first</li>
    </ul>
 
-<li><h3> Create a Folder </h3></li>
+### Create a Folder
 
-  Please create a new folder in your home directory called ``example1``, using the `mkdir` command. Please use `man mkdir` to see how to do this.
+  Please create a new folder in your home directory called ``example1``, using the ``mkdir`` command. Please use ``man mkdir`` to see how to do this.
   
   Now re-list your home directory after that command has run to see the change when creating that folder.
 
-<li><h3> Change Directory</h3></li>
+### Change Directory
    
-   This command is the bread and butter of navigating the HPC. The command is "change directory" `cd`. Using the `man` command, look into how to change directories and descend into your newly created folder ``example1``.
+   This command is the bread and butter of navigating the HPC. The command is "change directory" ``cd``. Using the ``man`` command, look into how to change directories and descend into your newly created folder ``example1``.
 
-<li><h3> Create a File</h3></li>
+### Create a File
 
-   We will now create an empty file, ready to be written to. This uses the `touch` command. Please create a file called ``afile.txt`` in your ``example1`` directory. (Again, use `man` to find out how to use the command)
+   We will now create an empty file, ready to be written to. This uses the ``touch`` command. Please create a file called ``afile.txt`` in your ``example1`` directory. (Again, use `man` to find out how to use the command)
 
-<li><h3> Write to a File</h3></li>
+### Write to a File
 
-   Using command line operations only, we will now write to, and append to the new file you have created.
-   Using the `echo` command, we will write and forward the outputs into the file. The first using the overwrite operator `>>` and the seccond using the append operator `>`.
+  Using command line operations only, we will now write to, and append to the new file you have created.
+  Using the ``echo`` command, we will write and forward the outputs into the file. The first using the overwrite operator `>>` and the seccond using the append operator `>`.
 
-   Please add the following two lines to ``afile.txt``:
-   <ul>
-     <li> This should appear inside the file </li>
-     <li>This should be the second line in the file</li>
-   </ul>
+  Please add the following two lines to ``afile.txt``:
+  <ul>
+    <li> This should appear inside the file </li>
+    <li>This should be the second line in the file</li>
+  </ul>
 
-   <details>
-     <summary>Hint</summary>
-       <ul>
-         <li> echo "Beep boop" >> robot.txt </li>
-       <ul>
-    </details>
+  <details>
+    <summary>Hint</summary>
+      <ul>
+        <li> echo "Beep boop" >> robot.txt </li>
+      <ul>
+  </details>
 
-<li><h3> View a File</h3></li>
+### View a File
   
   Given that you were successful in writing to the file - if not, copy the hint from above to complete this question.
 
   There are multiple ways to view files in the bash shell command line environment.
 
-  `cat` Is a command to print the contents to the command line. Use `man cat` to see how and check to see if you correctly wrote to the file in the previous step.
+  ``cat`` Is a command to print the contents to the command line. Use ``man cat`` to see how and check to see if you correctly wrote to the file in the previous step.
 
-  `less` Is a command, useful if you want to keep your command line clear/not print large files out to the command line. Again using man, view the file with the `less` command.
+  ``less`` Is a command, useful if you want to keep your command line clear/not print large files out to the command line. Again using man, view the file with the ``less`` command.
 
-  `vim` Is a command line editor. View the manual with `man vim`. It can be tricky - even unix admins for years screw up and have to force exit vim...
+  ``vim`` Is a command line editor. View the manual with ``man vim``. It can be tricky - even unix admins for years screw up and have to force exit vim...
 
   Generally:
   
@@ -217,7 +216,7 @@ If you get banned from the login node due to weird activity trying to login (or 
   Please try editing ``afile.txt``, and the saving your results with vim. View with `less`, if its made an changes.
 
 
-<li><h3> File Operations </h3></li>
+### File Operations 
 
   Theres a few commands that come into great use for manipulating data in files.
 
@@ -248,17 +247,17 @@ If you get banned from the login node due to weird activity trying to login (or 
 
 
 
-<li><h3> Delete a File</h3></li>
+### Delete a File
    
-   The dangerous command `rm`. Please be careful here - recovering a home directory is an absolute pain to do during a workshop...
+   The dangerous command ``rm``. Please be careful here - recovering a home directory is an absolute pain to do during a workshop...
 
-   Using `man` have a look at the `rm` command, and when comfortable, delete ``afile.txt``.
+   Using `man` have a look at the ``rm`` command, and when comfortable, delete ``afile.txt``.
 
-<li><h3> Delete a Folder</h3></li>
+### Delete a Folder
  
-  Now we can use a safer command `rmdir` which will only delete empty directories. 
+  Now we can use a safer command ``rmdir`` which will only delete empty directories. 
 
-  View the manual for `rmdir`, and after changing directory back to your home directory, or ascending up one level, delete ``example1`` dir.
+  View the manual for ``rmdir``, and after changing directory back to your home directory, or ascending up one level, delete ``example1`` dir.
 </ol>
 
 
