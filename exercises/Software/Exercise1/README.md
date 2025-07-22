@@ -1,7 +1,7 @@
 ---
 title: Advanced Exercises 1
 nav_order: 2
-permalink: /Advanced/Exercise1
+permalink: /Exercises/Advanced/Exercise1
 ---
 <div id="top"></div>
 
@@ -23,7 +23,7 @@ permalink: /Advanced/Exercise1
 
 <div align="center">
   <a href="https://universityofsussex-rc.github.io/Workshops/">
-    <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Software Exercises #1</h3>

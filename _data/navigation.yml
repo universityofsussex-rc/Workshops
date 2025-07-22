@@ -1,0 +1,29 @@
+- title: Workshops
+  url: "/"
+  items:
+    - title: Exercises
+      url: "/Exercises"
+      items:
+        - title: Basic
+          url: /Exercises/Basic/
+          items:
+            - title: Exercise 1
+              url: /Exercises/Basic/Exercise1/
+            - title: Exercise 2
+              url: /Exercises/Basic/Exercise2/
+            - title: Exercise 3
+              url: /Exercises/Basic/Exercise3/
+        - title: Artemis
+          url: /Exercises/artemis/
+          items:
+            - title: Exercise 1
+              url: /Exercises/artemis/Exercise1/
+            - title: Exercise 2
+              url: /Exercises/artemis/Exercise2/
+            - title: Exercise 3
+              url: /Exercises/artemis/Exercise3/
+        - title: Advanced
+          url: /Exercises/advanced/
+          items:
+            - title: Exercise 1
+              url: /Exercises/advanced/Exercise1/

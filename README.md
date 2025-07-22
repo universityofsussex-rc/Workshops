@@ -1,6 +1,5 @@
 ---
 title: Workshops
-nav_order: 1
 permalink: /
 ---
 
@@ -24,7 +23,7 @@ permalink: /
 
 <div align="center">
   <a href="https://universityofsussex-rc.github.io/Workshops/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">ITS Platforms - Research HPC Workshops</h3>
@@ -124,12 +123,11 @@ The Basic Exercies are for first time users of a HPC system. It is advised that 
 
 The Exercises are expected to take around 2h to complete, based on a 2-4h workshop. If you are currently attending a workshop, it should have already been mentioned that you are not expected to complete each exercise during the allotted time in the workshop. We expect you to complete these exercises after the workshop and contact the Research Team for additional help if needed via the slack channel. (See workshop invite for details).
 
-<ol>
-<li><a href="presentations/Introduction to HPC.pdf">Intro to HPC Slides</a></li>
-<li><a href="Basic/Exercise1/">Exercise 1</a></li>
-<li><a href="Basic/Exercise2/">Exercise 2</a></li>
-<li><a href="Basic/Exercise3/">Exercise 3</a></li>
-</ol>
+1. [Exercise1]({{ site.baseurl }}{% link exercises/basic/Exercise1/README.md %})
+1. [Exercise2]({{ site.baseurl }}{% link exercises/basic/Exercise2/README.md %})
+1. [Exercise3]({{ site.baseurl }}{% link exercises/basic/Exercise3/README.md %})
+1. [Slides]({{ site.baseurl }}/presentations/Introduction to HPC.pdf)
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -138,9 +136,7 @@ The Exercises are expected to take around 2h to complete, based on a 2-4h worksh
 ## Advanced Exercises
 
 ### TBD
-<ol>
-<li><a href="Advanced/Exercise1">Software Exercise 1</a></li>
-</ol>
+1. [Exercise1]({{ site.baseurl }}{% link exercises/Software/Exercise1/README.md %})
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -155,9 +151,9 @@ The Exercises are expected to take around 2h to complete, based on a 2-4h worksh
 
 These three Exercises are designed to get the basics of Navigating the new Artemis HRC Open OnDemand Web Portal with the Slurm Schedular.
 
-- <a href="Artemis/Exercise1/">Exercise 1</a>
-- <a href="Artemis/Exercise2/">Exercise 2</a>
-- <a href="Artemis/Exercise3/">Exercise 3</a>
+1. [Exercise1]({{ site.baseurl }}{% link exercises/artemis/Exercise1/README.md %})
+1. [Exercise2]({{ site.baseurl }}{% link exercises/artemis/Exercise2/README.md %})
+1. [Exercise3]({{ site.baseurl }}{% link exercises/artemis/Exercise3/README.md %})
 
 <!-- ROADMAP -->
 ## Roadmap

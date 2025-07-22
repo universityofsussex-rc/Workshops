@@ -1,7 +1,7 @@
 ---
 title: Basic Exercises 3
 nav_order: 2
-permalink: /Basic/Exercise3
+permalink: /Exercises/Basic/Exercise3
 ---
 <div id="top"></div>
 
@@ -23,7 +23,7 @@ permalink: /Basic/Exercise3
 
 <div align="center">
   <a href="https://universityofsussex-rc.github.io/Workshops/">
-    <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Basic Exercises #3</h3>

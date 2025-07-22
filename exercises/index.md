@@ -1,0 +1,20 @@
+---
+title: Exercises
+permalink: /Exercises
+---
+
+<div align="center">
+  <a href="https://universityofsussex-rc.github.io/Workshops/">
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Exercises</h3>
+    <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Go Back to Splash »</strong></a>
+    <br />
+</div>
+
+Welcome to the Exercises section! Choose a category below to get started:
+
+- [Basic Exercises](./basic/)
+- [Artemis Exercises](./artemis/)
+- [Advanced Exercises](./advanced/)
