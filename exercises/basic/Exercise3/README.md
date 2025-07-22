@@ -1,6 +1,7 @@
 ---
 title: Basic Exercises 3
 nav_order: 2
+permalink: /Basic/Exercise3
 ---
 <div id="top"></div>
 

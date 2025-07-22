@@ -1,6 +1,7 @@
 ---
 title: Workshops
 nav_order: 1
+permalink: /
 ---
 
 <div id="top"></div>
@@ -125,9 +126,9 @@ The Exercises are expected to take around 2h to complete, based on a 2-4h worksh
 
 <ol>
 <li><a href="presentations/Introduction to HPC.pdf">Intro to HPC Slides</a></li>
-<li><a href="exercises/basic/Exercise1/">Exercise 1</a></li>
-<li><a href="exercises/basic/Exercise2/">Exercise 2</a></li>
-<li><a href="exercises/basic/Exercise3/">Exercise 3</a></li>
+<li><a href="Basic/Exercise1/">Exercise 1</a></li>
+<li><a href="Basic/Exercise2/">Exercise 2</a></li>
+<li><a href="Basic/Exercise3/">Exercise 3</a></li>
 </ol>
 
 
@@ -138,7 +139,7 @@ The Exercises are expected to take around 2h to complete, based on a 2-4h worksh
 
 ### TBD
 <ol>
-<li><a href="exercises/software/Exercise1/">Software Exercise 1</a></li>
+<li><a href="Advanced/Exercise1">Software Exercise 1</a></li>
 </ol>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -154,9 +155,9 @@ The Exercises are expected to take around 2h to complete, based on a 2-4h worksh
 
 These three Exercises are designed to get the basics of Navigating the new Artemis HRC Open OnDemand Web Portal with the Slurm Schedular.
 
-- <a href="exercises/artemis/Exercise1/">Exercise 1</a>
-- <a href="exercises/artemis/Exercise2/">Exercise 2</a>
-- <a href="exercises/artemis/Exercise3/">Exercise 3</a>
+- <a href="Artemis/Exercise1/">Exercise 1</a>
+- <a href="Artemis/Exercise2/">Exercise 2</a>
+- <a href="Artemis/Exercise3/">Exercise 3</a>
 
 <!-- ROADMAP -->
 ## Roadmap

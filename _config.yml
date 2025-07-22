@@ -12,6 +12,7 @@ just_the_docs:
   color_scheme: dark
   color_scheme_toggle: true
 
+baseurl: "/Workshops"
 include:
  - README.md
  - exercises/basic/exercise1/README.md

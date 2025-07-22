@@ -1,6 +1,7 @@
 ---
 title: Advanced Exercises 1
 nav_order: 2
+permalink: /Advanced/Exercise1
 ---
 <div id="top"></div>
 

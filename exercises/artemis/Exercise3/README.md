@@ -1,6 +1,7 @@
 ---
 title: Artemis Exercises 3
 nav_order: 2
+permalink: /Artemis/Exercise1
 ---
 <div id="top"></div>
 
