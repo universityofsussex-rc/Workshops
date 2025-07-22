@@ -102,6 +102,7 @@ export PATH=/lustre/dir/gsl/install:$PATH
 
 You might wonder why we also set the CC and CXX paths - this is so that even if there is a binary that ends up looking for compiler libs - it will point back to the gcc and g++ versions we used to build the software.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## EasyBuild
 
@@ -183,7 +184,7 @@ Now create those directories.
 
 To use modules you install this way, simply extend the ``MODULEPATH`` variable with your install path. eg ``export MODULEPATH=$MODULEPATH:/mnt/lustre/users/<dep>/<user>/easybuild/modules``
 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 

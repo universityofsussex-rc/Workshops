@@ -34,12 +34,20 @@
     <a href="https://github.com/universityofsussex-rc/Workshops/issues">Report Bug</a>
     ·
     <a href="https://github.com/universityofsussex-rc/Workshops/issues">Request Feature</a>
-
-[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
-[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
-
   </p>
+
+  <p>
+    <a href="https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge" alt="Contributors" />
+    </a>
+    <a href="https://github.com/universityofsussex-its/RC-Workshops/network/members" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge" alt="Forks" />
+    </a>
+    <a href="https://github.com/universityofsussex-its/RC-Workshops/issues" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge" alt="Issues" />
+    </a>
+  </p>
+
 </div>
 
 
