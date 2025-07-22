@@ -8,10 +8,10 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
 
 
 
@@ -23,7 +23,7 @@
   </a>
 
   <h3 align="center">SGE to SLURM CHEAT SHEET</h3>
-    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 

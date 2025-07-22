@@ -7,25 +7,25 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
 
 
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-rc/Workshops">
+  <a href="https://universityofsussex-rc.github.io/Workshops/">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Basic Exercises #3</h3>
   <p align="center">
-    This third set of exercies are to familairise yourself with using batch jobs to perform some of the actions you have aleady done, but without an interactive session.
+    This third set of exercises are to familiarise yourself with using batch jobs to perform some of the actions you have already done, but without an interactive session.
   </p>
-    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -35,7 +35,7 @@
     <li><a href="#submit-a-simple-job">Submit a Simple Job</a></li>
     <li><a href="#file-operations">File Operations</a></li>
     <li><a href="#using-sge-variables">Using SGE Variables</a></li>
-    <li><a href="#job-classes">Job Classes</a></li>
+    <li><a href="#Partitions">Partitions</a></li>
     <li><a href="#timed-jobs">Timed Jobs</a></li>
     <li><a href="#extension-exercises">Extension Exercises</a></li>
   </ol>
@@ -47,9 +47,9 @@
 
 Submitting a job file when one is provided to you is a matter of copy and paste.
 
-Either copy it from here - or locate it in the copied folder from the previous exercise (you'll need to locate it using `ls` and `cd` or create a file using `vim` - please name it `workshop.job`).
+Either copy it from here - or locate it in the copied folder from the previous exercise (you'll need to locate it using ``ls`` and ``cd`` or create a file using ``vim`` - please name it `workshop.job`).
 
-You will have to exit any interactive session. To check the server you are currently on you can use the `hostname` command.
+You will have to exit any interactive session. To check the server you are currently on you can use the ``hostname`` command.
 
 <ol> 
 
@@ -60,46 +60,29 @@ You will have to exit any interactive session. To check the server you are curre
 
 ```bash
 #!/bin/bash
-#$ -N Workshop_Basic
-#$ -q smp.q
-#$ -pe openmp 1
-#$ -l m_mem_free=2G
-#$ -l h_vmem=2G
-#$ -cwd
-#$ -j y
-#$ -o output
-#$ -S /bin/bash
-#$ -jc test.short
+#SBATCH --job-name=Workshop_Basic
+#SBATCH --partition=Workshop     
+#SBATCH --cpus-per-task=1        
+#SBATCH --mem=2G                 # total memory per node
+#SBATCH --output=output.%j.out   # output file with job ID
+#SBATCH --error=output.%j.err    # error file (can be merged with output if you want)
 
-echo $JOB_ID
-echo $SGE_O_WORKDIR
-echo $SGE_O_HOST
-echo $SGE_O_WORKDIR
+echo $SLURM_JOB_ID
+echo $SLURM_SUBMIT_DIR
+echo $SLURMD_NODENAME
+echo $SLURM_SUBMIT_DIR
 ```
 
 </details>
 
 
-The arguments were described in the presentation part but for reference:
-
-<ul>
-<li> -N : Name of the job - will show in logs and scheduler queue </li>
-<li> -l : Command to add additional consumable arguements. In this case "h_vmem" is the memory per core, and "m_mem_free" is the force available memory </li>
-<li> -cwd : No value provided - is a flag to say please start the job in the submission current working directy as show by pwd command </li>
-<li> -j y : Join both error and standard output into one file. If "n" will create a file named by jobname.o and jobname.e appended by jobid </li>
-<li> -o : output file, if not specified defaults to the above. If a file, will append to it, if folder will create defaults files within </li>
-<li> -S : Shell to execute the job script - as mentioned you can use other shells but here we will only be using bash </li>
-<li> -jc : Specifies the job class - set usage limits and maximum cores etc. </li>
-</ul>
-
-
 Submit the file by running:
 
 ```bash
-qsub workshop.job
+  sbatch workshop.job
 ```
 
-And look at the newly created ``output`` file. Delete this file, create a directory called output and rerun the job. 
+And check the newly created output files. 
 
 <li> Viewing the Queue </li>
 
@@ -109,19 +92,19 @@ And look at the newly created ``output`` file. Delete this file, create a direct
 
   Edit the job file to add the `sleep` command. 
 
-  Once it has been submited run `qstat` and you should see your job either waiting or running in the queue, with details from the jobscript filling the queue information. 
+  Once it has been submited run ``squeue --me`` and you should see your job either waiting or running in the queue, with details from the job script filling the queue information. 
 
-  You can view the entire queue by selecting all users with the wildcard "*":
+  You can view the entire queue by omitting the ``--me``.
 
   ```bash
-    qstat -u "*"
+    squeue
   ```
 
-  This can be quite long and messy - considering piping to the `less` command, or filtering on the two queues relevant to you (smp.q and parallel.q)
+  This can be quite long and messy - considering piping to the `less` command, or filtering on the parition(s)  relevant to you.
 
   ```bash
-    qsub -u "*" | less
-    qsub -u "*" -q smp.q, parallel.q
+    squeue | less
+    squeue -p workshops,short
   ```
 
 </ol>
@@ -147,6 +130,13 @@ Submit your job and check it was successful.
 
  When submitting jobs this way, what do you think you need to be careful of?
 
+<details>
+  ```bash
+    # Get the first argument
+    FILENAME=$1
+    cat $FILENAME
+  ```
+</details>
 
 <li> Creating and Destroying </li>
 
@@ -170,7 +160,7 @@ You should not be using relative paths - use full paths such as ``mkdir -p /mnt/
 
 Run the job and double check the folder has been created and the structure looks like the above.
 
-Modify your jobscript to then create the same structure but the top level is called ``example2``, and then <strong> safely </strong> remove the files and folders. Use a `sleep` command of sufficent length to see it was successful (eg 60s)
+Modify your jobscript to then create the same structure but the top level is called ``example2``, and then <strong> safely </strong> remove the files and folders. Use a `sleep` command of sufficient length to see it was successful (eg 60s)
 
 It might be worthwhile to put some useful `echo` commands to state the job has created the folders as it completes them and then deletes them.
 
@@ -178,14 +168,14 @@ It might be worthwhile to put some useful `echo` commands to state the job has c
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Using SGE Variables
+## Using Slurm Variables
 
 <ol>
 <li> Simple Use of SGE Variables </li>
 
 Copy the ``workshop.job`` script and call it ``workshop_variables.job``.
 
-Modify the script to change directory to your ITS home directory, print the current working directory command output and the change back to the jobscript working directory using the `$SGE_O_WORKDIR` and `$HOME` variables.
+Modify the script to change directory to your ITS home directory, print the current working directory command output and the change back to the jobscript working directory using the ``$SLURM_SUBMIT_DIR`` and ``$HOME`` variables.
 
 <li> Simple Host check </li>
 
@@ -195,112 +185,100 @@ Modify your jobscript to write the hostname of the compute name your jobs is sen
 
 <li> Simple core count check </li>
 
-Modify your jobscript to ask for 4 cores and only 500MB of RAM per core. Output the number of cores your job was assigned (`$NSLOTS`) to the output file.
+Modify your jobscript to ask for 4 cores and only 500MB of RAM per core. Output the number of cores your job was assigned (you'll need ``$SLURM_NTASKS`` and ``$SLURM_CPUS_PER_TASK``) to the output file.
 
 </ol>
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Job Classes
+## Partitions
 
-In order to make the HPC and scheduler as fair as possible, we use job classes to limit runtimes and number of cores which can be consumed by those jobs.
+In order to make the HPC and scheduler as fair as possible, we use partitions to limit runtimes and number of cores which can be consumed by those jobs.
 
 This is in an attempt to prevent a user on a quiet night, hogging the entire cluster for 2 weeks...
 
-There are two types of jobclasses:
+There are two types of partitions:
 
-<ol>
-  <li> verylong.default </li>
-  This is the default class given if you forget to set it. It is the longest running and most constraining on maximum number of jobs/cores in use. Try not to use it. Kills your job if it takes longer than 30 days.
-  <li> test </li>
-    <ul>
-      <li> test.short </li>
-      Shortest and most numerous cores. Kills your job if it runs longer than 2h.
-      <li> test.default </li>
-      Midlle ground - Kills your job if it takes longer than 8h.
-      <li> test.long </li>
-      More contraining on cores but allows the job to run for a maximum of 8 days. 
-    </ul>
-</ol>
+ - General: (short,long,verylong) These are your available to everyone partitions, that limit CPU, RAM, GPUs and runtime. 
+ - Private: (gabrial, vision_lab, cisc, workshops) These are limited to particular research groups who purchased nodes for Artemis. Jobs submitted here will always run before general partitions.
 
-As such - if you have a long running job it is recommended you impliment checkpointing into your code. This will allow you to run with more cores competitively and simply resume where the previous run ended.
+As such - if you have a long running job it is recommended you implement checkpointing into your code. This will allow you to run with more cores competitively and simply resume where the previous run ended. 
+
+Abuse of this method to submit 1000s of small jobs to overwhelm the schedular logic counts as a policy violation and your account may be suspended.
 
 <ol>
 <li> Un-queuable Job </li>
 
-Copy and create a new jobscript called ``workshop_jobclasses.job``.
+Copy and create a new jobscript called ``workshop_oops.job``.
 
-Modify the script so the jobclass is ``verylong.default`` and request 2000 cores and 64GB per core. 
+Request 129 cores.
 
 Submit the job and check its status in the queue. 
 
 Unfortuantely this job will never run, so we need to delete it.
 
-In the output of the `qstat` command, your `jobid` will have been listed. Using that jobs id, submit the command:
+In the output of the ``squeue`` command, your ``jobid`` will have been listed. Using that jobs id, submit the command:
 
 ```bash
-qdel <jobid>
+  scancel <jobid>
 ```
 
-<li> Modifying a Queued Job </li>
-
-If you set the job class correct, you might realise that you submitted the wrong number of cores in your jobscript, or on the command line. You can modify your job once its been submitted with the `qalter` command. You cannot change the job class.
-
-Submit the job above again.
-
-Either from the command line output when you submitted the job, or using `qstat` to get the jobid. 
-
-Change the number of requested cores to 1 and RAM to 2GB.
-
-```bash
-qalter <jobid> -pe openmp 1 -l h_vmem=2G -l m_mem_free=2G
-```
-
-The job should now sucessfully queue, and the terminal should state which config options for the job it has had to change.
-
-You cannot change runtime or jobclass via this method as they are controlled by the shedular submission wrapper.
-
-</ol>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Timed Jobs
 
-For ecological reasons you might want to submit a job to run overnight, or after a specfic time. And example might be a job which needs to run after another remote system has updated (eg. Downloading Data after a public release). Another option is to run at time when the UK energy grid is most green/expected to be most green. Or if your job is dependendent on another job having completed (technically errored, failed and killed will also count as completed on the Apollo2 Grid Engine)
+For ecological reasons you might want to submit a job to run overnight, or after a specfic time. And example might be a job which needs to run after another remote system has updated (eg. Downloading Data after a public release). 
+
+Another option is to run at time when the UK energy grid is most green/expected to be most green. Or if your job is dependent on another job having completed (technically errored, failed and killed will also count as completed...)
 
 <ol>
 <li> Start Job After Timestamp</li>
 
-To do this you can set the `-a` flag, short for after. 
+To do this you can set the `--begin` flag.
 
-The format for this is in three forms:
+Theres many formats for this. And its important to note all times are in UTC.
 
 ```bash
-qsub -a 12241200 workshop.job # December 24th at 12:00.00
-qsub -a 202412241200 workshop.job # December 24th 2024 at 12:00.00
-qsub -a 202412241200.30 workshop.job #December 24th 2024 at 12:00 and 30 seconds.
+
+  # ISO 8601 format (recommended)
+  sbatch --begin=2026-12-24T12:00:00 myscript.sh
+
+  # With space instead of 'T'
+  sbatch --begin="2026-12-24 12:00:00" myscript.sh
+
+  # Without seconds
+  sbatch --begin="2026-12-24 12:00" myscript.sh
+
+  # With slashes (alternative separator)
+  sbatch --begin="12/24/2026 12:00:00" myscript.sh
+
+  # Without year (assumes current or next year)
+  sbatch --begin="Dec 24 12:00" myscript.sh
+
+  # Full text format
+  sbatch --begin="December 24, 2026 12:00" myscript.sh
 ```
 
-For ease of eyesight - we can expand the long variable out: `2024-12-24-12-00.30`.
 
 Submit a previous job while setting this commandline flag - set it to be 1 minutes after you submit and check back to see if it completed when you expected. 
 
-You can look at past jobs that have completed with the `qacct -j <jobid>` command.
+You can look at past jobs that have completed with the `sacct -j <jobid>` command.
 
 
 <li> Start Job After another Job completes </li>
 
 Copy and create two new jobscript files called ``workshop_slow.job`` and ``workshop_waiting.job``.
 
-Modify the first jobfile to be a simple sleep job for 30seconds. Have it print the start time to the output file using the `date +"%T"` command. The second ``workshop_waiting.job`` can be any of your previous jobscripts. Add a similar time statement out to the log file.
+Modify the first jobfile to be a simple sleep job for 30 seconds. Have it print the start time to the output file using the ``date +"%T"`` command. The second ``workshop_waiting.job`` can be any of your previous jobscripts. Add a similar time statement out to the log file.
 
-Now you can submit both jobs in sequence, with a requirement the the first job must be completed before the second starts. Here we make use of the " -terse" argument to `qsub` so that it only returns the ``jobid``.
+Now you can submit both jobs in sequence, with a requirement the the first job must be completed before the second starts. Here we make use of ``awk`` so that it only returns the ``jobid``.
 
 ```bash
-jobids=$(qsub -terse workshop_slow.job)
-jobids=jobids,$(qsub -terse workshop_slow.job) # Repeated to demonstrate a hold for multiple jobs
-qsub -hold_jid ${jobids} workshop_waiting.job
+jid1=$(sbatch test.job | awk '{print $4}')
+sbatch --dependency=afterok:$jid1 test.job
+
 ```
 
 Check the status of the queue and the sequence of timestamps to confirm the order once all your jobs have completed.
@@ -310,9 +288,9 @@ Check the status of the queue and the sequence of timestamps to confirm the orde
 
 ## Extension Exercises
 
-These are extension exercises if you wish to spend more time learning the more advance features of the grid engine batch scheduler. Support for these is not provided for you, and solutions will be self evident of reaching the requested result. 
+These are extension exercises if you wish to spend more time learning the more advance features of the slurm batch scheduler. Support for these is not provided for you, and solutions will be self evident of reaching the requested result. 
 
-Each of these tasks are completeable with the skills you have developed over these three exercies so far. However you may need to investivate more with `--help` and `man`. 
+Each of these tasks are completable with the skills you have developed over these three exercises so far. However you may need to investigate more with `--help` and `man`. 
 
 <ol>
 <li> Sequential Fibonacci Sequence </li>
@@ -342,11 +320,11 @@ Create a jobscript which will automatically load at least 30, non-conflicting, s
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/universityofsussex-rc/RC-Workshops.svg?style=for-the-badge
 [contributors-url]: https://github.com/universityofsussex-rc/Workshops/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/universityofsussex-rc/RC-Workshops.svg?style=for-the-badge
 [forks-url]: https://github.com/universityofsussex-rc/Workshops/network/members
-[stars-shield]: https://img.shields.io/github/stars/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/universityofsussex-rc/RC-Workshops.svg?style=for-the-badge
 [stars-url]: https://github.com/universityofsussex-rc/Workshops/stargazers
-[issues-shield]: https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/universityofsussex-rc/RC-Workshops.svg?style=for-the-badge
 [issues-url]: https://github.com/universityofsussex-rc/Workshops/issues

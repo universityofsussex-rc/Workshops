@@ -7,17 +7,17 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
 
 
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-rc/Workshops">
+  <a href="https://universityofsussex-rc.github.io/Workshops/">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,7 +25,7 @@
   <p align="center">
     This third set of exercise will get you logged into the Open OnDemand Web Portal and exploring the Interactive Applications.
   </p>
-    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -277,7 +277,7 @@ You should always rely on your own environment or a module loaded by the `module
 
 |  ⚠️ Warning ⚠️  |
 | :-----------: |
-| **IMPORTANT:** You do not need to do these steps today. Creating a kernel from scratch can take time - and based on bandwidth, might take 20m or more for your own research purposes. This is hear to go through the basics of how to create a kernel to use. |
+| **IMPORTANT:** You do not need to do these steps today. Creating a kernel from scratch can take time - and based on bandwidth, might take 20m or more for your own research purposes. This is here to go through the basics of how to create a kernel to use. |
 
 
 4. Start a Compute Session
@@ -370,7 +370,7 @@ You'll need to think about what resources you request when submitting these jobs
 
     Task: `Python GPU`
 
-    Description: Starting a GPU session, build a new Anconcda Environment with Tensorflow GPU support. Run the Test suite for Tensorflow.
+    Description: Starting a GPU session, build a new Anaconda Environment with Tensorflow GPU support. Run the Test suite for Tensorflow.
 
 
     Task: `Mixbench`
@@ -402,7 +402,7 @@ You should also feel comfortable:
 
 |  🎉 🎉 🎉 Congratualtions 🎉 🎉 🎉 |
 | :-----------: |
-| This is the End of the RSE Workshop. <br> However the RC-Workshops Repo will be updated contiually and you may find new tutorials. There will be more session run on Artemis and the HRC in the coming months. <br> Check the Slack `#hpc-workshop` channel for details |
+| This is the End of the Workshop. <br> However the Workshops Repo will be updated continually and you may find new tutorials. There will be more session run on Artemis and the HRC in the coming months. <br> Check the Slack `#hpc-workshop` channel for details. |
 
 
 

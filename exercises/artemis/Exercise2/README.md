@@ -7,17 +7,17 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
 
 
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-rc/Workshops">
+  <a href="https://universityofsussex-rc.github.io/Workshops/">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,7 +25,7 @@
   <p align="center">
     This second set of exercise will get you logged into the Open OnDemand Web Portal and exploring.
   </p>
-    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -114,7 +114,7 @@ In this section the exercises will take you through the job composer and the use
 
     Please, either using the <a href="https:artemis-docs.hpc.sussex.ac.uk/artemis">documentation</a>, the slides, google or the cheat sheet, set the SBATCH job headers to complete the following job. 
     
-    - `general` Partition.
+    - `workshops` Partition.
     - Request one CPU.
     - `250mb` of total RAM
     - Explicitly show No Mailing Options

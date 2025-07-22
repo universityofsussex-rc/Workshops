@@ -7,25 +7,25 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
 
 
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-rc/Workshops">
+  <a href="https://universityofsussex-rc.github.io/Workshops/">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Basic Exercises #2</h3>
   <p align="center">
-    This second set of exercise are designed to get you familair with the software modules and interactive sessions.
+    This second set of exercise are designed to get you familiar with the software modules and interactive sessions.
   </p>
-    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -97,39 +97,37 @@ The first thing when working remotely on a HPC is to handle the inevitable loss 
 ## Interactive Sessions
 
 
-An interative session is what it sounds like. This allows you to request resources from the HPC schedular to do normal work like a big laptop.
+An interactive session is what it sounds like. This allows you to request resources from the HPC schedular to do normal work like a big laptop.
 
-There are many many arguments  - and you should refer to our documentation site <a href="https://docs.hpc.sussex.ac.uk/apollo2/jobs_submission.html">https://docs.hpc.sussex.ac.uk/apollo2/jobs_submission.html</a> for more details.
+There are many many arguments  - and you should refer to our documentation site <a href="https://artemis-docs.hpc.sussex.ac.uk/artemis/jobs_submission.html">https://artemis-docs.hpc.sussex.ac.uk/artemis/jobs_submission.html</a> for more details.
 
 
 <ol>
 <li> Minimum Session </li>
 
-Within your screen use the `qrsh` command to start an interactive session. This will start a non-gui capeable session with 2GB RAM and 1 Core.
+Within your screen use the ``srun -p workshops --pty bash`` command to start an interactive session. This will start a non-gui capable session with 4GB RAM and 1 Core.
 
-Use the command `exit` or `logout` to end your interactive session.
+Use the command `exit` to end your interactive session.
 
-If you get a timed out error in the future, you'll need to add the `-now no` flag to let it wait for resources to become available.
+In future uses, the cluster may be busy - so you might need to wait up to 2h for resources to become free. 
 
 <li> Asking for more RAM/CPUs </li>
 
 Sometimes you'll need to do a bit more heavy workloads than editing files and commandline operations. Here we will ask for more cores. 
 
-The schedular calculates total memory buy multiply cores and RAM requests together. So if you want 30GB and 5 cores, you ask for 6GB per core.
+The schedular can calculate total memory buy multiply cores and RAM requests together. So if you want 30GB and 5 cores, you ask for 6GB per core.
 
-Using the flags shown in the presentation (`m_mem_free`, `q` and `pe`), request an interactive session with 2G per core and 4 cores.
+Using the flags shown in the presentation (``--mem-per-cpu``,``-cpus-per-task``), request an interactive session with 6G per core and 4 cores.
 
-Now do the same but ask for 30 cores and 4G per core - what do you see? (Do not set the `-now no` flag)
+Now do the same but ask for 30 cores and 8G per core - what do you see?
 
 The cluster is a shared resource - and as such you are competing for space with others. The more resources you ask for the longer it takes to be allocated, and the lower your priority will become as you use more and more resources within a timescale.
 
 <li> GUIs </li>
 
-Sometimes you'll need to be able to view images/graphical user interfaces. For this you will need to use the `qlogin` command over `qrsh`. 
+Sometimes you'll need to be able to view images/graphical user interfaces. This is not possible on Artemis from ssh sessions.
 
-To view a jpg or png you can use the `display` command. Start an interactive session and navigate the previously copied directory to find a image to display. What do you notice about the time it takes to display? What happened to your current working directory when you started an interacitve session?
-
-Software like Matlab that start interactive IDEs will have this lag when working - and rendering remotely is quite expensive. This is why working on your local computer with a remote drive mounted is VSCode is generally faster than loading up an editor on the cluster.
+> We do not support commandline X11 GUIs. Please see the Artemis Exercises for the remote desktop for GUIS.
 
 </ol>
 
@@ -152,7 +150,7 @@ In this case, `module` has a help flag `--help`. Run this now `module --help`.
 
 <li> Module Exploring </li>
 
-There are over 2k software packages installed on Apollo2. Becuase of this you'll need to parse the name, or partial name of software you are looking for, and often will see multple versions.
+There are over 2k software packages installed on Artemis. Because of this you'll need to parse the name, or partial name of software you are looking for, and often will see multiple versions.
 
 In the case of python, not only do you have many versions of the base software, but you'll also have sub modules, and software built with it that will also be returned. 
 
@@ -164,21 +162,13 @@ To view how many packages for Python there are.
 
 Now try `module avail Python` and `module avail Python-3`.
 
-<details>
-<summary>Hint</summary>
-
-Arrows keys will move you up and down.
-
-`q` will quit the menu like the `less` command
-
-</details>
 
 The overview command is not case dependent but will only list the number of packages. Avail will list all matching packages and their versions. 
 
 
 <li> Module spider </li>
 
-If you are unsure what a software is - you can explore available packages in even greater detail with the `module spider` command. This will give the destiption of the software, dependencies and often a url to view the homepage.
+If you are unsure what a software is - you can explore available packages in even greater detail with the `module spider` command. This will give the description of the software, dependencies and often a url to view the homepage.
 
 Run the command:
 
@@ -200,7 +190,7 @@ How would this conflict with ``TensorFlow/1.8.0-foss-2018a-Python-3.6.4``?
 
 Try loading both now with the `module load` command.
 
-If you see this message within your normal HPC work - you will have problems eventually. You'll have to use the above commands to find a version that works with your already loady packages or request for a specific version to be installed for you. This can be avoided with environment managers like ``Anaconda3`` for Python for example.
+If you see this message within your normal HPC work - you will have problems eventually. You'll have to use the above commands to find a version that works with your already loaded packages or request for a specific version to be installed for you. This can be avoided with environment managers like ``Anaconda3`` for Python for example.
 
 <li> Cleaning up your loaded modules </li>
 
@@ -208,7 +198,6 @@ Sometimes you'll have loaded the wrong modules. You can view what modules you ha
 
 You'll see up to 60 loaded modules, with different versions of `GCCcore` - which conflict. You'll need to purge your environment with `module purge`. Run this now and rerun the list command.
 
-Unfortunately this will have also removed the `sge` module if you were on the login node (you should be in an interactive session...). You would need to load that to be able to use the scheduler.
 
 
 <li> Saving a module list </li>

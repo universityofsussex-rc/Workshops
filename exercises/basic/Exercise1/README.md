@@ -7,17 +7,17 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
 
 
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-rc/Workshops">
+  <a href="https://universityofsussex-rc.github.io/Workshops/">
     <img src="../../../images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,14 +25,14 @@
   <p align="center">
     This first set of exercise will introduce you to navigating around the HPC, from your Home directory to storage systems, creating a bash script and lastly creating a copy of this repository.
   </p>
-    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Go Back to Splash »</strong></a>
+    <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Exercises</summary>
   <ol>
-    <li><a href="#login">Login</a></li>
+    <li><a href="#shell">Shell</a></li>
     <li><a href="#basic-bash">Basic Bash</a></li>
     <li><a href="#storage">Storage</a></li>
     <li><a href="#bash-scripts">Bash Scripts</a></li>
@@ -44,84 +44,89 @@
 
 
 
-<!-- Login -->
-## Login
-<p>
-  This first exercise will get you logged into the Apollo2 HPC. You will enter the <strong>Janus</strong> login node. Traditionally this login node is not for any work, but for navigating around and editing scripts.
-</p>
-<p>
-  Please go to whatever OS you use, then proceed to <a href="#all">ALL</a> section.
-</p>
+<!-- Shell -->
+## Shell
+
+We are going to need a shell for the first section, and then we will use the command ``ssh`` to access the Artemis HPC Cluster. 
+
+First - please start/login to the ``Global Protect`` app. If you don't have this installed, please log into ``bond.sussex.ac.uk`` and download it.
+
+If you are remote/hybrid completing this course - using your two-factor app, please login to the ``Staff VPN``. If on campus, simply being logged in should be enough.
 
 ### Mac
 
 ##### Start a terminal
 Click <b>Launchpad</b> >> <b>Terminal</b>
-Ths should bring up a black bash shell terminal. This will allow you to run the ssh login commad to janus:
+Ths should bring up a black bash shell terminal. This will allow you to run the ssh login command to the login node:
 
 ```bash
-  ssh -XY <username>@janus.hpc.sussex.ac.uk
+  ssh -XY <username>@ood.hrc.sussex.ac.uk
 ```
-
-Where <it>username</it> is your sussex, shortform username for email/canvas etc. Eg.
-
-```bash
-  ssh -XY anon123@janus.hpc.sussex.ac.uk
-```
-
+  
 ### Linux
 
-Generall the shortcut `Ctrl + Alt + T` will open a terminal window for you.
+Generally the shortcut `Ctrl + Alt + T` will open a terminal window for you.
 
 Ths should bring up a purple,red or black bash shell terminal based on your flavour of linux. 
 
 This will allow you to run the ssh login commad to janus:
 
 ```bash
-  ssh -XY <username>@janus.hpc.sussex.ac.uk
+  ssh -XY <username>@ood.hrc.sussex.ac.uk
 ```
 
 Where <it>username</it> is your sussex, shortform username for email/canvas etc. Eg.
 
 ```bash
-  ssh -XY anon123@janus.hpc.sussex.ac.uk
+  ssh -XY <username>@ood.hrc.sussex.ac.uk
 ```
 
 ### Windows
 
-For connecting to the HPC - this workshop will only provide one example using MobaXterm. The reason for this is simple - the RC admin who wrote this likes MobaXterm... :D 
+For connecting to the HPC - this workshop will only provide one example using MobaXterm. The reason for this is simple - the RC admin who wrote this likes MobaXterm... 😁 
 
 Launch MobaXterm from the Search Window or from your Desktop (we suggest to pin to taskbar if you will use the HPC often)
 
 You should get a window open like this:
-<img src="../../../images/exercise1/a2-mob1.png">
-
+<p align="center">
+  <img src="../../../images/exercise1/a2-mob1.png">
+</p>
 Click <strong>Session</strong> in the top left corner. You should have a window pop up that looks like this:
-<img src="../../../images/exercise1/a2-mob2.png">
+
+<p align="center">
+  <img src="../../../images/exercise1/a2-mob2.png">
+</p>
 
 
 Click <strong>SSH</strong> in the top left again and enter the following:
 
-Remote host: `janus.hpc.sussex.ac.uk`
+Remote host: `ood.artemis.hrc.sussex.ac.uk`
 Username: `anon123`
 
 Where the username is your sussex, shortform username for email/canvas etc.
 
+Click ``Advanced SSH Settings`` - please make sure ``X-11 Forwarding`` is not selected - we don't allow X11-Forwarding from the login node.
+
 It should look like this:
-<img src="../../../images/exercise1/a2-mob3.png">
+
+<p align="center">
+  <img src="../../../images/exercise1/a2-mob3.png">
+</p>
 
 Click <strong>OK</strong> and you will open a terminal in the main MobaXterm window, which will prompt for your Sussex password. Type this in, noting that you will not see the cursor move/show your password. (Fun tidbit - this was orignally a bug in linux but was thought useful and kept).
 
 
 ### ALL
 
-You should now be seeing the Login Splash for the Apollo2 HPC. Depending on your terminal theme it should look somthing like this:
+You should now be seeing the Login Splash for the Artemis HPC. Depending on your terminal theme it should look something like this:
 
-<img src="../../../images/exercise1/a2-splash.png">
+<p align="center">
+  <img src="../../../images/exercise1/splash.png">
+</p>
 
-<strong>IF</strong> you cannot connect to `janus.hpc.sussex.ac.uk` you can try our second, older login node `apollo2.hpc.sussex.ac.uk`.
+<strong>IF</strong> you cannot connect to `ood.hrc.sussex.ac.uk`, you might not be logged into ``Global Protect`` or the ``Staff VPN``. (Or might not have requested a HPC Account)
 
-If you get banned from Janus due to weird activity trying to login (or password failure too many times) - contact an admin with your ip address to be unbanned. Visit <a href="www.sussex.ac.uk/its/ip">here</a> if you need to find your IP. (Preferred route as this says what Sussex sees your IP as).
+If you get banned from the login node due to weird activity trying to login (or password failure too many times) - contact an admin with your ip address to be unbanned. Visit <a href="www.sussex.ac.uk/its/ip">here</a> if you need to find your IP. (Preferred route as this says what Sussex sees your IP as).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -130,7 +135,7 @@ If you get banned from Janus due to weird activity trying to login (or password 
 <ol>
 <li><h3> man Command</h3></li>
 
-  One of the most usefull tools available for figuring out bash and other commands while you are on the HPC is the `man` command. This will bring up a text manual for whichever command you want to check. You may never stop using it, even after 10 years... It is very handy when you have forgetten which way around arguments go for a given command. 
+  One of the most usefull tools available for figuring out bash and other commands while you are on the HPC is the `man` command. This will bring up a text manual for whichever command you want to check. You may never stop using it, even after 10 years... It is very handy when you have forgotten which way around arguments go for a given command. 
 
   This exercise will use a number of commands, which you should first check with the man command to figure out how to use it. 
 
@@ -197,15 +202,51 @@ If you get banned from Janus due to weird activity trying to login (or password 
   `vim` Is a command line editor. View the manual with `man vim`. It can be tricky - even unix admins for years screw up and have to force exit vim...
 
   Generally:
-  <ul>
-    <li> i: Will begin Interactive mode once vim is open to allow you to edit</li>
-    <li> esc: exits most modes, including interactive </li>
-    <li> ":" The colon begins the command window - used mostly to exit once edits are done, and save, force quit etc.</li>
-    <li> "wq" : is the "write and quit" command to be used with the return key when in command mode. </li>
-    <li> "q!" : is the "oops" force quit command when in the command mode </li>
-  </ul>
+  
+  >  I.   ``i:`` Will begin Interactive mode once vim is open to allow you to edit
+  >
+  >  II.  ``esc:`` exits most modes, including interactive 
+  >
+  >  III. ``":"`` The colon begins the command window - used mostly to exit once edits are done, and save, force quit etc.
+  >
+  >  IV.  ``wq`` : is the "write and quit" command to be used with the return key when in command mode.  
+  >
+  >  V.   ``q!`` : is the "oops" force quit command when in the command mode 
+
 
   Please try editing ``afile.txt``, and the saving your results with vim. View with `less`, if its made an changes.
+
+
+<li><h3> File Operations </h3></li>
+
+  Theres a few commands that come into great use for manipulating data in files.
+
+  ``grep``: Searches for patterns in files or input text. It prints lines that match the given pattern.
+
+  ``wc``: Stands for word count. It counts lines, words, and characters in input.
+
+  ``cut``: Extracts specific columns or fields from lines of text, often delimited by characters like commas or spaces.
+
+
+
+  Example CSV:
+
+  ```bash
+  RA,DEC,OBSID,NAME,Classification
+  15.0342,-72.1234,0123450101,XCSJ010008.21-720724.2,Cluster
+  180.5678,2.3456,0123460201,XCSJ120216.19+022050.2,Point
+  210.7890,-10.9876,0123470301,XCSJ140309.36-105916.4,Point
+  300.1234,45.6789,0123480401,XCSJ200029.61+454054.0,Point
+  45.6789,-5.4321,0123490501,XCSJ030242.94-052555.6,Cluster
+  ```
+
+  1. Create a csv file with the contents above. 
+  1. Using the ``man`` command, examine how to use the command ``grep``.
+  1. Use grep to find all the lines in your csv with ``Cluster`` in. Is it case sensitive?
+  1. Do the same for the ``wc`` command, and count the number of lines in the file.
+  1. Do the same for the ``cut`` command, and extract the ``NAME`` column from the csv file.
+
+
 
 <li><h3> Delete a File</h3></li>
    
@@ -219,6 +260,8 @@ If you get banned from Janus due to weird activity trying to login (or password 
 
   View the manual for `rmdir`, and after changing directory back to your home directory, or ascending up one level, delete ``example1`` dir.
 </ol>
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -255,11 +298,14 @@ Test this now on your lustre users directory to see the number of files and huma
 
 ## Bash Scripts
 
-In this section of the exercise we will be working through creating bash scripts. These will be invaluable for performing simple operations on the HPC, which you want to either save for posterity incase you need to reproduce your efforts. Or for ease of convienience while writing out the logic. 
+In this section of the exercise we will be working through creating bash scripts. These will be invaluable for performing simple operations on the HPC, which you want to either save for posterity incase you need to reproduce your efforts. Or for ease of convenience while writing out the logic. 
 
-Bash scripts are the default format for writing jobs submissions to the HPC scheduler. (Other options are avaiable but we will only handle bash in this workshop).
+Bash scripts are the default format for writing jobs submissions to the HPC scheduler. (Other options are available but we will only handle bash in this workshop).
 
-<strong>All these scripts should exist in your lustre user directory, as this is where we will be working from now on. </strong>
+|  🔊 🔊 🔉 **Note** 🔊 🔊 🔉 |
+| :-----------: |
+| All these scripts should be created in your lustre user directory, as this is where we will be working from now on.|
+| Please create a directory called ``HPC-Workshops`` so admins can find you work quickly. |
 
 <ol>
 <li><h3> Simple Print </h3></li>
@@ -329,7 +375,25 @@ eg. your execution of the file will look like:
 
 ## Summary
 
-This exercise is now complete but you have one more task to do. Using all your knowledge gained so far - you will need to use `man` to examine the copy command `cp` and look at recurssive flags. Once you have done this - you need to copy the directory `/mnt/lustre/its/Workshops/RC-Workshops/` to your lustre user directory.
+ You should now have an understanding of:
+
+  - Accessing the HPC via SSH
+  - Basic Bash Commands For:
+    - Navigation and Listing
+    - Creation and Deleting
+    - Manipulation and Extraction
+  - Use of Vim for file editing
+  - Creation of executable scripts
+  - Loops
+
+
+This exercise is now complete but you have one more task to do. 
+
+Using all your knowledge gained so far - you will need to use `man` to examine the copy command `cp` and look at recursive flags. 
+
+Once you have done this - you need to copy the directory ``/mnt/lustre/its/Workshops/RC-Workshops/`` to your ``$HOME`` directory.
+
+This is a copy of this Workshop repo.
 
 
 

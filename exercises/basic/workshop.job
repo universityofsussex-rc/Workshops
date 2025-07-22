@@ -1,16 +1,12 @@
 #!/bin/bash
-#$ -N Workshop_Basic
-#$ -q smp.q
-#$ -pe openmp 1
-#$ -l m_mem_free=2G
-#$ -l h_vmem=2G
-#$ -cwd
-#$ -j y
-#$ -o output
-#$ -S /bin/bash
-#$ -jc test.short
+#SBATCH --job-name=Workshop_Basic
+#SBATCH --partition=Workshop     
+#SBATCH --cpus-per-task=1        
+#SBATCH --mem=2G                 # total memory per node
+#SBATCH --output=output.%j.out   # output file with job ID
+#SBATCH --error=output.%j.err    # error file (can be merged with output if you want)
 
-echo $JOB_ID
-echo $SGE_O_WORKDIR
-echo $SGE_O_HOST
-echo $SGE_O_WORKDIR
+echo $SLURM_JOB_ID
+echo $SLURM_SUBMIT_DIR
+echo $SLURMD_NODENAME
+echo $SLURM_SUBMIT_DIR

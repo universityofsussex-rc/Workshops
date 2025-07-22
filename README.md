@@ -7,17 +7,17 @@
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
 
 
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/universityofsussex-rc/Workshops">
+  <a href="https://universityofsussex-rc.github.io/Workshops/">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -26,18 +26,18 @@
   <p align="center">
     Repository for Training and Workshop Materials for new and Existing users of the University of Sussex's High Performace Computing Cluster
     <br />
-    <a href="https://github.com/universityofsussex-rc/Workshops"><strong>Explore the docs »</strong></a>
+    <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/universityofsussex-rc/Workshops">View Demo</a>
+    <a href="https://universityofsussex-rc.github.io/Workshops/">View Pages</a>
     ·
     <a href="https://github.com/universityofsussex-rc/Workshops/issues">Report Bug</a>
     ·
     <a href="https://github.com/universityofsussex-rc/Workshops/issues">Request Feature</a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
+[![Contributors](https://img.shields.io/github/contributors/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/network/members)
+[![Issues](https://img.shields.io/github/issues/universityofsussex-its/RC-Workshops.svg?style=for-the-badge)](https://github.com/universityofsussex-its/RC-Workshops/issues)
 
   </p>
 </div>
@@ -106,16 +106,15 @@ In order to complete the workshops you will need to have the following setup/ins
 <!-- BASIC EXERCISES -->
 ## Basic Exercises
 
-The Basic Exercies are for first time users of a HPC system. It is advised that all new users to the Sussex HPC at least review the exercises and attempt to complete them. The exercies are given within a workshop but you may also attempt them on their own. Please be advised you may need to review the policies and rules for use of the HPC if not attending a workshop where these are explained. 
+The Basic Exercies are for first time users of a HPC system. It is advised that all new users to the Sussex HPC at least review the exercises and attempt to complete them. The exercises are given within a workshop but you may also attempt them on their own. Please be advised you may need to review the policies and rules for use of the HPC if not attending a workshop where these are explained. 
 
-The Exercies are expected to take around 2h to complete, based on a 2-4h workshop. If you are currently attending a workshop, it should have already been mentioned that you are not expected to complete each exercise during the allotted time in the workshop. We expect you to complete these exercises after the workshop and contact the Research Team for additional help if needed via the slack channel. (See workshop invite for details).
+The Exercises are expected to take around 2h to complete, based on a 2-4h workshop. If you are currently attending a workshop, it should have already been mentioned that you are not expected to complete each exercise during the allotted time in the workshop. We expect you to complete these exercises after the workshop and contact the Research Team for additional help if needed via the slack channel. (See workshop invite for details).
 
 <ol>
 <li><a href="presentations/Introduction to HPC.pdf">Intro to HPC Slides</a></li>
 <li><a href="exercises/basic/Exercise1/">Exercise 1</a></li>
 <li><a href="exercises/basic/Exercise2/">Exercise 2</a></li>
 <li><a href="exercises/basic/Exercise3/">Exercise 3</a></li>
-<li><a href="exercises/basic/Exercise4/">Exercise 4</a></li>
 </ol>
 
 
@@ -125,6 +124,9 @@ The Exercies are expected to take around 2h to complete, based on a 2-4h worksho
 ## Advanced Exercises
 
 ### TBD
+<ol>
+<li><a href="exercises/software/Exercise1/">Software Exercise 1</a></li>
+</ol>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -138,8 +140,6 @@ The Exercies are expected to take around 2h to complete, based on a 2-4h worksho
 ## Artemis
 
 These three Exercises are designed to get the basics of Navigating the new Artemis HRC Open OnDemand Web Portal with the Slurm Schedular.
-
-These are presented currently as a DEMO for the RSE Workshop and not intended to be the final design. The slides will be uploaded once checked for sensitive data.
 
 - <a href="exercises/artemis/Exercise1/">Exercise 1</a>
 - <a href="exercises/artemis/Exercise2/">Exercise 2</a>
