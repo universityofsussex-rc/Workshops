@@ -3,6 +3,9 @@ plugins:
 relative_links:
   enabled: true
   collections: true
+theme: minimal-mistakes-jekyll
+# Enable dark mode
+minimal_mistakes_skin: dark
 include:
  - README.md
  - exercises/basic/exercise1/README.md
