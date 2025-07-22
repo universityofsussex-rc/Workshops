@@ -1,9 +1,13 @@
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+
 plugins:
+  - jekyll-remote-theme
   - jekyll-relative-links
+
 relative_links:
   enabled: true
   collections: true
+
 just_the_docs:
   color_scheme: dark
 include:
