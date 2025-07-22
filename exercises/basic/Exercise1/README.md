@@ -1,3 +1,7 @@
+---
+title: Basic Exercises 1
+nav_order: 2
+---
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->
@@ -184,7 +188,7 @@ If you get banned from the login node due to weird activity trying to login (or 
   <details>
     <summary>Hint</summary>
       <ul>
-        <li> echo "Beep boop" >> robot.txt </li>
+        <li> echo "Beep boop" &gt;&gt; robot.txt </li>
       <ul>
   </details>
 
@@ -394,7 +398,7 @@ Once you have done this - you need to copy the directory ``/mnt/lustre/its/Works
 
 This is a copy of this Workshop repo.
 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 

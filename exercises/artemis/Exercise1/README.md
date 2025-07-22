@@ -1,3 +1,7 @@
+---
+title: Artemis Exercises 1
+nav_order: 2
+---
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->

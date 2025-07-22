@@ -1,3 +1,8 @@
+---
+title: Workshops
+nav_order: 1
+---
+
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->

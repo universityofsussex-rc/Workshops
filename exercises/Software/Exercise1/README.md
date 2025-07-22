@@ -1,3 +1,7 @@
+---
+title: Advanced Exercises 1
+nav_order: 2
+---
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->
@@ -26,14 +30,16 @@
     This set of exercise will get you ready to install software into your own storage on the cluster. 
 
 
-| 🚨 🚨 🚨 **NOTE** 🚨 🚨 🚨 |
-| :-----------------------------------------: |
-| This comes under the advanced tier due to wanting to limit users duplicating software installs in many places. <br> This is useful for when you need software immediately, and cannot wait for the admins to install for you. <br><strong> However always request software via the IT Service Desk Help portal. </strong> |
-
   </p>
     <a href="https://universityofsussex-rc.github.io/Workshops/"><strong>Go Back to Splash »</strong></a>
     <br />
 </div>
+
+| 🚨 🚨 🚨 **NOTE** 🚨 🚨 🚨 |
+| :-----------------------------------------: |
+| This comes under the advanced tier due to wanting to limit users duplicating software installs in many places. <br> This is useful for when you need software immediately, and cannot wait for the admins to install for you. <br><strong> However always request software via the IT Service Desk Help portal. </strong> |
+
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Exercises</summary>
@@ -42,6 +48,9 @@
     <li><a href="#EasyBuild">EasyBuild</a></li>
   </ol>
 </details>
+
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

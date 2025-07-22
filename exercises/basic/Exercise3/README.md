@@ -1,3 +1,7 @@
+---
+title: Basic Exercises 3
+nav_order: 2
+---
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->
@@ -47,16 +51,15 @@
 
 Submitting a job file when one is provided to you is a matter of copy and paste.
 
-Either copy it from here - or locate it in the copied folder from the previous exercise (you'll need to locate it using ``ls`` and ``cd`` or create a file using ``vim`` - please name it `workshop.job`).
+Either copy it from here - or locate it in the copied folder from the previous exercise (you'll need to locate it using ``ls`` and ``cd`` or create a file using ``vim`` - please name it ``workshop.job``).
 
 You will have to exit any interactive session. To check the server you are currently on you can use the ``hostname`` command.
 
-<ol> 
 
-<li> Simple Job </li>
 
-<details>
-<summary>Job File</summary>
+### Simple Job 
+
+##### Job File
 
 ```bash
 #!/bin/bash
@@ -73,8 +76,6 @@ echo $SLURMD_NODENAME
 echo $SLURM_SUBMIT_DIR
 ```
 
-</details>
-
 
 Submit the file by running:
 
@@ -84,7 +85,7 @@ Submit the file by running:
 
 And check the newly created output files. 
 
-<li> Viewing the Queue </li>
+### Viewing the Queue 
 
   Given that the queue isnt too busy, our job should complete almost immediately.
 
@@ -100,21 +101,21 @@ And check the newly created output files.
     squeue
   ```
 
-  This can be quite long and messy - considering piping to the `less` command, or filtering on the parition(s)  relevant to you.
+  This can be quite long and messy - considering piping to the `less` command, or filtering on the partition(s)  relevant to you.
 
   ```bash
     squeue | less
     squeue -p workshops,short
   ```
 
-</ol>
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## File Operations
 
-<ol>
-<li> Simple file read </li>
+
+### Simple file read 
 
 We can now start piecing some of the skills we've learnt in previous exercises to do file operations within a jobscript.
 
@@ -124,7 +125,7 @@ Re-using your ``penguin_names.txt`` - modify ``workshop_io.job`` to read in the 
 Rename the jobname to be ``workshop_io`` instead of ``workshop_basic``.
 Submit your job and check it was successful.
 
-<li> Dynamic File Read </li>
+### Dynamic File Read 
  
  Now modify the same jobscript file, but to take an argument fed from the commandline to read a given filename, like before.
 
@@ -138,7 +139,7 @@ Submit your job and check it was successful.
   ```
 </details>
 
-<li> Creating and Destroying </li>
+### Creating and Destroying 
 
 Create a new copy of ``workshop.job`` called ``workshop_cyberman.job``, and rename the job name accordingly.
 
@@ -170,24 +171,24 @@ It might be worthwhile to put some useful `echo` commands to state the job has c
 
 ## Using Slurm Variables
 
-<ol>
-<li> Simple Use of SGE Variables </li>
+
+### Simple Use of SGE Variables 
 
 Copy the ``workshop.job`` script and call it ``workshop_variables.job``.
 
 Modify the script to change directory to your ITS home directory, print the current working directory command output and the change back to the jobscript working directory using the ``$SLURM_SUBMIT_DIR`` and ``$HOME`` variables.
 
-<li> Simple Host check </li>
+### Simple Host check 
 
 Sometimes the job can go wrong, either because of an error in your script, a compute node failure, or a central Sussex IT failure. In general it is good to write the host name of the compute node you're job is running on. This way, in the event of failure which you believe is a fault with the system, you can provide the node your job was running on.
 
 Modify your jobscript to write the hostname of the compute name your jobs is sent to. 
 
-<li> Simple core count check </li>
+### Simple core count check 
 
 Modify your jobscript to ask for 4 cores and only 500MB of RAM per core. Output the number of cores your job was assigned (you'll need ``$SLURM_NTASKS`` and ``$SLURM_CPUS_PER_TASK``) to the output file.
 
-</ol>
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -207,8 +208,8 @@ As such - if you have a long running job it is recommended you implement checkpo
 
 Abuse of this method to submit 1000s of small jobs to overwhelm the schedular logic counts as a policy violation and your account may be suspended.
 
-<ol>
-<li> Un-queuable Job </li>
+
+### Un-queuable Job 
 
 Copy and create a new jobscript called ``workshop_oops.job``.
 
@@ -233,8 +234,8 @@ For ecological reasons you might want to submit a job to run overnight, or after
 
 Another option is to run at time when the UK energy grid is most green/expected to be most green. Or if your job is dependent on another job having completed (technically errored, failed and killed will also count as completed...)
 
-<ol>
-<li> Start Job After Timestamp</li>
+
+### Start Job After Timestamp
 
 To do this you can set the `--begin` flag.
 
@@ -267,7 +268,7 @@ Submit a previous job while setting this commandline flag - set it to be 1 minut
 You can look at past jobs that have completed with the `sacct -j <jobid>` command.
 
 
-<li> Start Job After another Job completes </li>
+### Start Job After another Job completes 
 
 Copy and create two new jobscript files called ``workshop_slow.job`` and ``workshop_waiting.job``.
 
@@ -283,7 +284,7 @@ sbatch --dependency=afterok:$jid1 test.job
 
 Check the status of the queue and the sequence of timestamps to confirm the order once all your jobs have completed.
 
-</ol>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Extension Exercises
@@ -292,27 +293,26 @@ These are extension exercises if you wish to spend more time learning the more a
 
 Each of these tasks are completable with the skills you have developed over these three exercises so far. However you may need to investigate more with `--help` and `man`. 
 
-<ol>
-<li> Sequential Fibonacci Sequence </li>
+
+### Sequential Fibonacci Sequence 
 
 Create a jobscript which calculates the Fibonacci sequence by matching the following conditions.
-<ol>
+
 <li> Calculates 100 Fibonacci numbers and writes them to a file - Job then completes </li>
 <li> If a previous job has calculated 100 Fibonacci numbers, read the last two numbers in the file and calculate the next 100 </li>
 <li> If the job were to go beyond 1k Fibonacci numbers, it only returns the next 25 , and then stops. </li>
 <li> The job sleeps for 30 second after calculting its 100 numbers </li>
 <li> The submit time for all of the jobs need to be within 1 minute (submit time is the time when the job is sent from command line, start time is when the job starts)</li>
-</ol>
 
-<li> GPU Job </li>
+
+### GPU Job 
 
 For this you will need to submit a job which reserves a single gpu_card, runs the `nvidia-smi` command and stores the results to a log file. This log file should also provide the date and time the command was run, which node it was run on and the directory the job was submitted from.
 
-<li> Environment Creater </li>
+### Environment Creater 
 
 Create a jobscript which will automatically load at least 30, non-conflicting, same tool-chain modules for a user. It will then save that module set for the user. This jobscript should only run after midnight of the next day of the jobs submission to reduce carbon footprint.
 
-</ol>
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
