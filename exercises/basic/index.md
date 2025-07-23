@@ -1,6 +1,7 @@
 ---
 title: Basic Exercises
 permalink: /Exercises/Basic
+nav_order: 3
 ---
 
 <div align="center">

@@ -1,7 +1,7 @@
 ---
 title: Basic Exercises 2
-nav_order: 2
 permalink: /Exercises/Basic/Exercise2
+nav_order: 5
 ---
 <div id="top"></div>
 

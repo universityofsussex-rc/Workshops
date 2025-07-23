@@ -1,7 +1,7 @@
 ---
 title: Artemis Exercises 3
-nav_order: 2
 permalink: /Artemis/Exercise1
+nav_order: 10
 ---
 <div id="top"></div>
 
@@ -75,12 +75,12 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     You should see a page like this:
     
     <p align="center">
-    <img src="../../../images/sge-slurm/xfce-rdp.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-rdp.PNG"/>
     </p>
     
     Do not change these options for this exercise. If your default are different, please set them as above. If you say A40 for GPU - please be aware it might take some time to queue - consider turning this to no for now (it wont really be needed, but gives an example of an environment with one)
 
-    You can also navigate to this page by clicking the <img src="../../../images/sge-slurm/ts-icon.PNG" width="30px"/> Icon -> DEV-Remote Desktop:
+    You can also navigate to this page by clicking the <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/ts-icon.PNG" width="30px"/> Icon -> DEV-Remote Desktop:
 
 
     Click Launch.
@@ -88,13 +88,13 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     You should now have something that looks like this:
 
     <p align="center">
-    <img src="../../../images/sge-slurm/xfce-starting.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-starting.PNG"/>
     </p>
 
     Once this completes and the job starts you should get something like this:
 
     <p align="center">
-    <img src="../../../images/sge-slurm/xfce-started.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-started.PNG"/>
     </p>
 
     If you're internet runs at the speed of a sloth in high winds after a night out in Revenge, you can increase the compression and decrease the Image Quality to reduce the network bandwidth and letnecy.
@@ -110,7 +110,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     Once the Remote Desktop has loaded you should have something like this (depending on what your conference friends have done to the desktop so far).
 
     <p align="center">
-    <img src="../../../images/sge-slurm/xfce-desktop.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-desktop.PNG"/>
     </p>
 
     Play Around.
@@ -125,7 +125,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     - Explore the Settings on the Left-Hand-Side Pop-tab. (Especially how the clipboard works with mac!)
 
     <p align="center">
-    <img src="../../../images/sge-slurm/xfce-poptab.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-poptab.PNG"/>
     </p>
     
 3. Disconnecting or Ending Session
@@ -139,10 +139,10 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     This will eventually complete the Remote Desktop Job and should look like:
 
     <p align="center">
-    <img src="../../../images/sge-slurm/xfce-complete.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-complete.PNG"/>
     </p>
 
-    If you want to re-launch it because you closed it by mistake simply click the relaunch button <img src="../../../images/sge-slurm/xfce-relaunch.PNG" width="40px"/>.
+    If you want to re-launch it because you closed it by mistake simply click the relaunch button <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-relaunch.PNG" width="40px"/>.
 
     If you want to clear the job - click delete - otherwise it will be cleared automatically in 6 days.
 
@@ -173,7 +173,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     Voila. It should look something like:
 
     <p align="center">
-    <img src="../../../images/sge-slurm/code-server.PNG">
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/code-server.PNG">
     </p>
 
 
@@ -197,7 +197,7 @@ If you are not familiar - Jupyter is a development environment with run-time exe
     You should have something like this:
     
     <p align="center">
-    <img src="../../../images/sge-slurm/jupyter-launch.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-launch.PNG"/>
     </p>
 
     Dont worry about the `FOO`, the Jupyter Service was recently being played with by the coolest research computing team member... 👀 
@@ -205,7 +205,7 @@ If you are not familiar - Jupyter is a development environment with run-time exe
     For now - don't change anything and click Launch - you should have the screen show:
 
     <p align="center">
-    <img src="../../../images/sge-slurm/jupyter-starting.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-starting.PNG"/>
     </p>
 
     Which hopefully looks familiar from the Remote Desktop Launch.
@@ -215,7 +215,7 @@ If you are not familiar - Jupyter is a development environment with run-time exe
     Eventually the screen should look like:
 
     <p align="center">
-    <img src="../../../images/sge-slurm/jupyter-running.png"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-running.png"/>
     </p>
 
 2. Connecting to the Jupyter Notebook
@@ -233,7 +233,7 @@ If you are not familiar - Jupyter is a development environment with run-time exe
     You should have something that looks like:
 
     <p align="center">
-    <img src="../../../images/sge-slurm/jupyter-top.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-top.PNG"/>
     </p>
 
 3. Create a Notebook
@@ -249,7 +249,7 @@ If you are not familiar - Jupyter is a development environment with run-time exe
     To Rename the notebook file click `Untitled` and you'll have a prompt appear to rename it to something useful. Please do so to avoid conflicts.
 
     <p align="center">
-    <img src="../../../images/sge-slurm/jupyter-save.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-save.PNG"/>
     </p>
 
 4. Don't forget that for custom environments pending the App being enhanced, you can use the remote desktop to launch Jupyter Notebooks.
@@ -323,16 +323,16 @@ There is now a kernel which you can `pip install` python packages to.
 
     In your Jupyter Session - click the Kernel button in the top right.
 
-    <img src="../../../images/sge-slurm/jupyter-set-kernel.PNG"/>
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-set-kernel.PNG"/>
 
     This will give you a new drop down - where you should see the another kernel besides the default.
 
-    <img src="../../../images/sge-slurm/jupyter-kernel-pick.PNG" />
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-kernel-pick.PNG" />
 
 
     If you select the checkbox - the next time you start Jupyter this kernel will be loaded by default:
 
-    <img src="../../../images/sge-slurm/jupyter-kernel-preferred.PNG" />
+    <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-kernel-preferred.PNG" />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -346,7 +346,7 @@ Or if you have started multiple notebook - you might need to clean up your envir
 
     In the Jupyter Home File Browser Tab:
 
-     <img src="../../../images/sge-slurm/jupyter-stop.PNG"/>
+     <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jupyter-stop.PNG"/>
 
     Click the `Running` Tab - And you can individually or group Kill running kernels.
 
@@ -355,7 +355,7 @@ Or if you have started multiple notebook - you might need to clean up your envir
 
     Simply Exit all your Jupyter Tabs.
 
-    The Interactive Applications page from the Dashboard will show your Jupyter Notebook Job as completed. Once again you can simply hit the relaunch  <img src="../../../images/sge-slurm/xfce-relaunch.PNG" width="30px"/> Icon to start a new session.
+    The Interactive Applications page from the Dashboard will show your Jupyter Notebook Job as completed. Once again you can simply hit the relaunch  <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-relaunch.PNG" width="30px"/> Icon to start a new session.
 
     Deleting the Session will not delete your files. And the job session will be deleted in 6 days automatically.
 

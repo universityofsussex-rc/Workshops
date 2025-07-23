@@ -1,7 +1,7 @@
 ---
 title: Artemis Exercises 2
-nav_order: 2
 permalink: /Artemis/Exercise1
+nav_order: 9
 ---
 <div id="top"></div>
 

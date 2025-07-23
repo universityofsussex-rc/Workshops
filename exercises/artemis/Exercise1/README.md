@@ -1,7 +1,7 @@
 ---
 title: Artemis Exercises 1
-nav_order: 2
 permalink: /Artemis/Exercise1
+nav_order: 8
 ---
 <div id="top"></div>
 
@@ -80,7 +80,7 @@ bash-4.2$ ssh anon123@ood.artemis.hrc.sussex.ac.uk
 The landing page should look like:
 </p>
 <p align="center">
-<img src="../../../images/sge-slurm/ood-splash.PNG"/>
+<img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/ood-splash.PNG"/>
 </p>
 <p>
 
@@ -153,7 +153,7 @@ In the navigation bar at the top you have the following options:
 ## Files
 
 <p align="center">
-<img src="../../../images/sge-slurm/files-menu.PNG" />
+<img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/files-menu.PNG" />
 </p>
 
 The Files menu allows exploration, edit, upload of files and folders into the HRC environment. 
@@ -193,7 +193,7 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
         You should see somthing like:
 
         <p align="center">
-        <img src="../../../images/sge-slurm/active-jobs.PNG"/>
+        <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/active-jobs.PNG"/>
         </p>
 
         This page lists any active job in the queue, with selection for each cluster, and allows the user some basic filter options. Depending on the current progress of other users in the Workshop - you may or may not see some jobs active.
@@ -203,13 +203,13 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
         This will either redirect or open a new tab and you should see a page similar to:
 
         <p align="center">
-        <img src="../../../images/sge-slurm/jobs-composer.PNG"/>
+        <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jobs-composer.PNG"/>
         </p>
 
     3. Navigate in the new grey navigation menu to `Templates` - again you should see something similar to:
 
         <p align="center">
-        <img src="../../../images/sge-slurm/jobs-templates.png"/>
+        <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/jobs-templates.png"/>
         </p>
 
     4. Either close the tab, or click the `Open OnDemand` in the top right to navigate back to the Dashboard.
@@ -224,13 +224,13 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
     1. Using the `Clusters` dropdown - start an interactive shell session on one of the production cluster login nodes.
 
         <p align="center">
-        <img src="../../../images/sge-slurm/prd_shell.png" align/>
+        <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/prd_shell.png" align/>
         </p>
 
         You should now have a command line shell on one of the `artemis-login-0` nodes.
 
         <p align="center">
-        <img src="../../../images/sge-slurm/shell.PNG" class="centre" />
+        <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/shell.PNG" class="centre" />
         </p>
 
     2. Navigate to your `workdir`, using simple bash commands. Listing the directory should show 2 folders and 2 files. 
@@ -259,7 +259,7 @@ You can access any of the remote mounted storage from this page, by clicking "Ch
 This dropdown provides access to one of the key tools that Open OnDemand will provide that was lacking in the Apollo2 HPC. Currently available are a Remote-Desktop tool provided by XFCE and a Jupyter Notebook server.
 
 <p align="center">
-<img src="../../../images/sge-slurm/dd-interactive-apps.PNG"/>
+<img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/dd-interactive-apps.PNG"/>
 </p>
 
 ## Monitoring

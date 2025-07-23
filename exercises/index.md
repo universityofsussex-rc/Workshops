@@ -1,6 +1,7 @@
 ---
 title: Exercises
 permalink: /Exercises
+nav_order: 2
 ---
 
 <div align="center">

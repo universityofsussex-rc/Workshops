@@ -1,6 +1,7 @@
 ---
 title: Advanced Exercises
 permalink: /Exercises/Advanced/
+nav_order: 11
 ---
 
 <div align="center">

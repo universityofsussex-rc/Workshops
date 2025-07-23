@@ -1,6 +1,7 @@
 ---
 title: Artemis Exercises
 permalink: /Exercises/Artemis
+nav_order: 7
 ---
 
 <div align="center">

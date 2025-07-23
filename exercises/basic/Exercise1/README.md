@@ -1,7 +1,7 @@
 ---
 title: Basic Exercises 1
-nav_order: 2
 permalink: /Exercises/Basic/Exercise1
+nav_order: 4
 ---
 <div id="top"></div>
 
@@ -94,12 +94,12 @@ Launch MobaXterm from the Search Window or from your Desktop (we suggest to pin 
 
 You should get a window open like this:
 <p align="center">
-  <img src="../../../images/exercise1/a2-mob1.png">
+  <img src="https://universityofsussex-rc.github.io/Workshops/images/exercise1/a2-mob1.png">
 </p>
 Click <strong>Session</strong> in the top left corner. You should have a window pop up that looks like this:
 
 <p align="center">
-  <img src="../../../images/exercise1/a2-mob2.png">
+  <img src="https://universityofsussex-rc.github.io/Workshops/images/exercise1/a2-mob2.png">
 </p>
 
 
@@ -115,18 +115,18 @@ Click ``Advanced SSH Settings`` - please make sure ``X-11 Forwarding`` is not se
 It should look like this:
 
 <p align="center">
-  <img src="../../../images/exercise1/a2-mob3.png">
+  <img src="https://universityofsussex-rc.github.io/Workshops/images/exercise1/a2-mob3.png">
 </p>
 
 Click <strong>OK</strong> and you will open a terminal in the main MobaXterm window, which will prompt for your Sussex password. Type this in, noting that you will not see the cursor move/show your password. (Fun tidbit - this was orignally a bug in linux but was thought useful and kept).
 
 
-### ALL
+### Login (ALL)
 
 You should now be seeing the Login Splash for the Artemis HPC. Depending on your terminal theme it should look something like this:
 
 <p align="center">
-  <img src="../../../images/exercise1/splash.png">
+  <img src="https://universityofsussex-rc.github.io/Workshops/images/exercise1/splash.png">
 </p>
 
 <strong>IF</strong> you cannot connect to `ood.hrc.sussex.ac.uk`, you might not be logged into ``Global Protect`` or the ``Staff VPN``. (Or might not have requested a HPC Account)
@@ -181,17 +181,12 @@ If you get banned from the login node due to weird activity trying to login (or 
   Using the ``echo`` command, we will write and forward the outputs into the file. The first using the overwrite operator `>>` and the seccond using the append operator `>`.
 
   Please add the following two lines to ``afile.txt``:
-  <ul>
-    <li> This should appear inside the file </li>
-    <li>This should be the second line in the file</li>
-  </ul>
+  
+  - This should appear inside the file
+  - This should be the second line in the file
+  
 
-  <details>
-    <summary>Hint</summary>
-      <ul>
-        <li> echo "Beep boop" &gt;&gt; robot.txt </li>
-      <ul>
-  </details>
+
 
 ### View a File
   

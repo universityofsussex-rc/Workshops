@@ -1,7 +1,7 @@
 ---
 title: Advanced Exercises 1
-nav_order: 2
 permalink: /Exercises/Advanced/Exercise1
+nav_order: 12
 ---
 <div id="top"></div>
 
