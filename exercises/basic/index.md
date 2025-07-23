@@ -15,6 +15,6 @@ permalink: /Exercises/Basic
 
 Welcome to the Basic Exercises section. Choose an exercise below to get started:
 
-- [Exercise 1](/Artemis/Exercise1)
-- [Exercise 2](/Artemis/Exercise2)
-- [Exercise 3](/Artemis/Exercise3)
+- [Exercise 1]({{ site.baseurl }}{% link exercises/basic/Exercise1/README.md %})
+- [Exercise 2]({{ site.baseurl }}{% link exercises/basic/Exercise2/README.md %})
+- [Exercise 3]({{ site.baseurl }}{% link exercises/basic/Exercise3/README.md %})

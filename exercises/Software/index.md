@@ -15,4 +15,4 @@ permalink: /Exercises/Advanced/
 
 Here are the advanced exercises available:
 
-- [Exercise 1](/Exercise1)
+- [Exercise 1]({{ site.baseurl }}{% link exercises/Software/Exercise1/README.md %})
