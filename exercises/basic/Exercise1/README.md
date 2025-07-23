@@ -67,7 +67,7 @@ Click <b>Launchpad</b> >> <b>Terminal</b>
 Ths should bring up a black bash shell terminal. This will allow you to run the ssh login command to the login node:
 
 ```bash
-  ssh -XY <username>@ood.hrc.sussex.ac.uk
+  ssh -XY <username>@ood.artemis.hrc.sussex.ac.uk
 ```
   
 ### Linux
@@ -79,13 +79,13 @@ Ths should bring up a purple,red or black bash shell terminal based on your flav
 This will allow you to run the ssh login commad to janus:
 
 ```bash
-  ssh -XY <username>@ood.hrc.sussex.ac.uk
+  ssh -XY <username>@ood.artemis.hrc.sussex.ac.uk
 ```
 
 Where <it>username</it> is your sussex, shortform username for email/canvas etc. Eg.
 
 ```bash
-  ssh -XY <username>@ood.hrc.sussex.ac.uk
+  ssh -XY <username>@ood.artemis.hrc.sussex.ac.uk
 ```
 
 ### Windows
@@ -131,7 +131,7 @@ You should now be seeing the Login Splash for the Artemis HPC. Depending on your
   <img src="https://universityofsussex-rc.github.io/Workshops/images/exercise1/splash.png">
 </p>
 
-<strong>IF</strong> you cannot connect to `ood.hrc.sussex.ac.uk`, you might not be logged into ``Global Protect`` or the ``Staff VPN``. (Or might not have requested a HPC Account)
+<strong>IF</strong> you cannot connect to `ood.artemis.hrc.sussex.ac.uk`, you might not be logged into ``Global Protect`` or the ``Staff VPN``. (Or might not have requested a HPC Account)
 
 If you get banned from the login node due to weird activity trying to login (or password failure too many times) - contact an admin with your ip address to be unbanned. Visit <a href="www.sussex.ac.uk/its/ip">here</a> if you need to find your IP. (Preferred route as this says what Sussex sees your IP as).
 
