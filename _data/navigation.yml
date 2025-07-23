@@ -4,23 +4,23 @@
     - title: Basic
       url: /Exercises/Basic/
       items:
-        - title: Exercise 1
+        - title: Basic Exercise 1
           url: /Exercises/Basic/Exercise1/
-        - title: Exercise 2
+        - title: Basic Exercise 2
           url: /Exercises/Basic/Exercise2/
-        - title: Exercise 3
+        - title: Basic Exercise 3
           url: /Exercises/Basic/Exercise3/
     - title: Artemis
       url: /Exercises/Artemis/
       items:
-        - title: Exercise 1
+        - title: Artemis Exercise 1
           url: /Exercises/Artemis/Exercise1/
-        - title: Exercise 2
+        - title: Artemis Exercise 2
           url: /Exercises/Artemis/Exercise2/
-        - title: Exercise 3
+        - title: Artemis Exercise 3
           url: /Exercises/Artemis/Exercise3/
     - title: Advanced
       url: /Exercises/Advanced/
       items:
-        - title: Exercise 1
+        - title: Advanced Exercise 1
           url: /Exercises/Advanced/Exercise1/

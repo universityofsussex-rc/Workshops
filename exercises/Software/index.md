@@ -1,7 +1,10 @@
 ---
 title: Advanced Exercises
-permalink: /Exercises/Advanced/
+permalink: /Exercises/Advanced
 nav_order: 11
+has_children: true
+parent: "Exercises"
+grand_parent: "Workshops"
 ---
 
 <div align="center">
