@@ -8,9 +8,9 @@ relative_links:
   enabled: true
   collections: true
 
-just_the_docs:
-  color_scheme: dark
-  color_scheme_toggle: true
+
+color_scheme: dark
+color_scheme_toggle: true
 
 baseurl: "/Workshops"
 
