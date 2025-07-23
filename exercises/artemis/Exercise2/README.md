@@ -2,6 +2,8 @@
 title: Artemis Exercises 2
 permalink: /Artemis/Exercise1
 nav_order: 9
+parent: "Artemis Exercises"
+grand_parent: "Exercises"
 ---
 <div id="top"></div>
 

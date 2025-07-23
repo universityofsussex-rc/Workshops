@@ -2,6 +2,8 @@
 title: Exercises
 permalink: /Exercises
 nav_order: 2
+parent: "Workshops"
+has_children: true
 ---
 
 <div align="center">

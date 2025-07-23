@@ -2,6 +2,8 @@
 title: Basic Exercises 2
 permalink: /Exercises/Basic/Exercise2
 nav_order: 5
+parent: "Basic Exercises"
+grand_parent: "Exercises"
 ---
 <div id="top"></div>
 

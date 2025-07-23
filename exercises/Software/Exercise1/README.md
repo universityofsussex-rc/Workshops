@@ -2,6 +2,8 @@
 title: Advanced Exercises 1
 permalink: /Exercises/Advanced/Exercise1
 nav_order: 12
+parent: "Advanced Exercises"
+grand_parent: "Exercises"
 ---
 <div id="top"></div>
 

@@ -2,6 +2,9 @@
 title: Basic Exercises
 permalink: /Exercises/Basic
 nav_order: 3
+has_children: true
+parent: "Exercises"
+grand_parent: "Workshops"
 ---
 
 <div align="center">
