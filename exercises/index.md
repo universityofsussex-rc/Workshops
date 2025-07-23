@@ -15,6 +15,6 @@ permalink: /Exercises
 
 Welcome to the Exercises section! Choose a category below to get started:
 
-- [Basic Exercises](./basic/)
-- [Artemis Exercises](./artemis/)
-- [Advanced Exercises](./advanced/)
+- [Basic Exercises](/Basic/)
+- [Artemis Exercises](/Artemis/)
+- [Advanced Exercises](/Advanced/)

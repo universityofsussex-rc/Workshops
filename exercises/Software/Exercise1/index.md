@@ -15,4 +15,4 @@ permalink: /Exercises/Advanced/
 
 Here are the advanced exercises available:
 
-- [Exercise 1](./exercise1.md)
+- [Exercise 1](/Exercise1)
