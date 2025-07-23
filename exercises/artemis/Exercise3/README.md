@@ -1,6 +1,6 @@
 ---
 title: Artemis Exercises 3
-permalink: /Artemis/Exercise1
+permalink: /Artemis/Exercise3
 nav_order: 10
 parent: "Artemis Exercises"
 grand_parent: "Exercises"

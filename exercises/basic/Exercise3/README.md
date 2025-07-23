@@ -134,13 +134,13 @@ Submit your job and check it was successful.
 
  When submitting jobs this way, what do you think you need to be careful of?
 
-<details>
-  ```bash
-    # Get the first argument
-    FILENAME=$1
-    cat $FILENAME
-  ```
-</details>
+
+```bash
+  # Get the first argument
+  FILENAME=$1
+  cat $FILENAME
+```
+
 
 ### Creating and Destroying 
 
@@ -168,7 +168,6 @@ Modify your jobscript to then create the same structure but the top level is cal
 
 It might be worthwhile to put some useful `echo` commands to state the job has created the folders as it completes them and then deletes them.
 
-</ol>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -190,8 +189,6 @@ Modify your jobscript to write the hostname of the compute name your jobs is sen
 ### Simple core count check 
 
 Modify your jobscript to ask for 4 cores and only 500MB of RAM per core. Output the number of cores your job was assigned (you'll need ``$SLURM_NTASKS`` and ``$SLURM_CPUS_PER_TASK``) to the output file.
-
-
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

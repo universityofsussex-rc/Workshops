@@ -2,6 +2,8 @@
 title: Basic Exercises 1
 permalink: /Exercises/Basic/Exercise1
 nav_order: 4
+parent: "Basic Exercises"
+grand_parent: "Exercises"
 ---
 <div id="top"></div>
 
@@ -258,7 +260,7 @@ If you get banned from the login node due to weird activity trying to login (or 
   Now we can use a safer command ``rmdir`` which will only delete empty directories. 
 
   View the manual for ``rmdir``, and after changing directory back to your home directory, or ascending up one level, delete ``example1`` dir.
-</ol>
+
 
 
 
@@ -266,32 +268,31 @@ If you get banned from the login node due to weird activity trying to login (or 
 
 ## Storage
 
-<p>
 Everyone has at least two directories beside their home for storing data. This is on the lustre filesystem and you have two types.
-</p>
-<ul>
-<li>Scratch: Temporary unlimited storage - can be deleted by admins after 30 days if they need to.</li>
-<li>User: Non-backed Up - 2TB Limit - Should be your main storage area.</li>
-</ul>
 
-<ol>
-  <li><h3> Navigate to Scratch </h3></li>
 
-Confirm you have a temporary scratch directory located at `/mnt/lustre/scratch/<dep>/<username>/`
+- Scratch: Temporary unlimited storage - can be deleted by admins after 30 days if they need to.
+- User: Non-backed Up - 2TB Limit - Should be your main storage area.
+
+
+### Navigate to Scratch
+
+Confirm you have a temporary scratch directory located at ``/mnt/lustre/scratch/<dep>/<username>/``
     
-  <li><h3> Navigate to Users </h3></li>
+### Navigate to User
 
-Confirm you have a users directory located at `/mnt/lustre/users/<dep>/<username>/`
+Confirm you have a users directory located at ``/mnt/lustre/users/<dep>/<username>/``
 
-  <li><h3> Check Quota </h3></li>  
+### Check Quota 
 
-You can take a look at the man entry for `lfs` which is the lustre filesystem command. However the only command we will look at today is the `getquota` to view your current usage. 
+You can take a look at the man entry for ``lfs`` which is the lustre filesystem command. However the only command we will look at today is the ``getquota`` to view your current usage. 
+
 ```bash
   lfs getquota -hu <username> /mnt/lustre/users/<dep>/<username>/
 ```
 
 Test this now on your lustre users directory to see the number of files and human readable disc usage.
-</ol>
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -306,8 +307,8 @@ Bash scripts are the default format for writing jobs submissions to the HPC sche
 | All these scripts should be created in your lustre user directory, as this is where we will be working from now on.|
 | Please create a directory called ``HPC-Workshops`` so admins can find you work quickly. |
 
-<ol>
-<li><h3> Simple Print </h3></li>
+
+### Simple Print
 
 Create a file using `vim` called ``simple_print.sh``, where the first line should be `#!/bin/bash`. This sets the file to be a bash script. 
 
@@ -320,7 +321,7 @@ of a simple
 print script in bash
 ```
 
-<li><h3> Run Simple Print </h3></li>
+### Run Simple Print
 
 Attempt to run the ``simple_print.sh`` script using `./simple_print.sh`. What do you get?
 
@@ -336,7 +337,7 @@ And see what has changed.
 
 Try running the script again.
 
-<li><h3> File Operations </h3></li>
+### File Operations
 
 In this exercise we are going to read some variables from a file and print them to screen using bash variables. This is useful when wanting to later submit array jobs with specific input args. (Or for checking if results are what you expected).
 
@@ -365,10 +366,11 @@ If you run this file, it should print each name from ``penguin_names.txt``. You 
 Modify ``loop_de_loop.sh`` to read a file provided by an argument parsed on the command line.
 
 eg. your execution of the file will look like:
+
 ```bash
   ./loop_de_loop.sh penguin_names.txt
 ```
-</ol>
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -388,7 +390,7 @@ eg. your execution of the file will look like:
 
 This exercise is now complete but you have one more task to do. 
 
-Using all your knowledge gained so far - you will need to use `man` to examine the copy command `cp` and look at recursive flags. 
+Using all your knowledge gained so far - you will need to use ``man`` to examine the copy command ``cp`` and look at recursive flags. 
 
 Once you have done this - you need to copy the directory ``/mnt/lustre/its/Workshops/RC-Workshops/`` to your ``$HOME`` directory.
 
