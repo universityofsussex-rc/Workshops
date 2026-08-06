@@ -99,7 +99,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
     <img src="https://universityofsussex-rc.github.io/Workshops/images/sge-slurm/xfce-started.PNG"/>
     </p>
 
-    If you're internet runs at the speed of a sloth in high winds after a night out in Revenge, you can increase the compression and decrease the Image Quality to reduce the network bandwidth and letnecy.
+    If you're internet runs at the speed of a sloth in high winds after a night out in Revenge, you can increase the compression and decrease the Image Quality to reduce the network bandwidth and latency.
 
     Additionally, if working remotely from your supervisor or colleague, you can share a View Only link that would allow them to see your activity.
 
