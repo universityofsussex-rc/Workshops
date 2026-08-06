@@ -72,7 +72,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     If you aren't already on it, you'll need to navigate back to the Dashboard.
 
-    Select Interactive Apps -> Desktop -> DEV-Remote Desktop.
+    Select Interactive Apps -> Desktop -> Adv Remote Desktop.
 
     You should see a page like this:
     
