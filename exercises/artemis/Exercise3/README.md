@@ -170,7 +170,7 @@ If theres is a "Desktop Application" software you'd like as basic - you would re
 
     Now restart code-server in your shell, and click the browser icon.
 
-    Navigate to `localhost:8080` and type in your password (note it probably isnt 8080 anymore).
+    Navigate to `localhost:8080` and type in your password.
 
     Voila. It should look something like:
 
