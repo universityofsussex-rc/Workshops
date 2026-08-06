@@ -82,6 +82,7 @@ export CC=$(which gcc);export CXX=$(which g++)
 echo $CC; echo $CXX
 ```
 
+Note - If you get a module not found error from `module load CMake`, see 'Software Not Found' in the [FAQs section of the Artemis documentation](https://artemis-docs.hpc.sussex.ac.uk/staging/faq.html).
 
 2. Now we need to fetch the files and unpack them.
 
