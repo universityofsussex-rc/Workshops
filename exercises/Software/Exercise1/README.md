@@ -87,18 +87,19 @@ Note - If you get a module not found error from `module load CMake`, see 'Softwa
 2. Now we need to fetch the files and unpack them.
 
 ```bash
-mkdir /lustre/dir/gsl
+mkdir /mnt/lustre/<your_user_path>/gsl
+cd /mnt/lustre/<your_user_path>/gsl
 wget https://ftp.gnu.org/gnu/gsl/gsl-2.7.1.tar.gz
 tar -xvf gsl-2.7.1.tar.gz
-cd gsl
+cd gsl-2.7.1
 ```
 
 3. Now we perform a simple configure make. Normally on a personal laptop you wouldnt need the prefix path - however you do not have root access and need to install to a directory owned by you.
 
 ```bash
 
-mkdir /lustre/dir/gsl/install
-./configure --prefix /lustre/dir/gsl/install
+mkdir /lustre/dir/gsl/gsl-2.7.1/install
+./configure --prefix /lustre/dir/gsl/gsl-2.7.1/install
 make -j10
 make install
 ```
