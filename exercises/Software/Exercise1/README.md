@@ -71,7 +71,7 @@ Things to remember when installing software:
 
 ### Example Install Exercise
 
-Here will will load modules for the compilers, download the source files and install to a custom directory.
+Here we will load modules for the compilers, download the source files and install to a custom directory.
 
 1. First we need to load a compiler. Here I've chosen GCC v 13.3.0 and all the bells and whistles that comes with CMake - we arent going to use CMake, this is just habbit for it to work with other modules which might need more advanced installs.
 
@@ -118,7 +118,7 @@ You might wonder why we also set the CC and CXX paths - this is so that even if 
 
 ## EasyBuild
 
-We use EasyBuild on the Artemis HPC. You are also welcome to use it to install adittional packages which are simple, and needed quickly. Remember to submit a service request though for it to be built by System Admin specifically for Artemis architecture.
+We use EasyBuild on the Artemis HPC. You are also welcome to use it to install additional packages which are simple, and needed quickly. Remember to submit a service request though for it to be built by System Admin specifically for Artemis architecture.
 
 ### What is EasyBuild?
 
@@ -144,7 +144,7 @@ You run commands like:
 
 ```bash
 eb -S GSL
-eb Dr GSL-2.7.1.eb 
+eb -Dr GSL-2.7.1.eb 
 eb -r GSL-2.7.1.eb
 ```
 
