@@ -193,11 +193,11 @@ This is a important command to make sure you dont end up with conflicting packag
 
 Use the module display command to find which packages would be loaded by an ``FSL`` module. (Find a specific version with ``avail`` or ``spider``, then use ``display``).
 
-How would this conflict with ``TensorFlow/1.8.0-foss-2018a-Python-3.6.4``?
+How would this conflict with ``RELION/5.0.0-foss-2023a-CUDA-12.1.1``?
 
 Try loading both now with the ``module load`` command.
 
-If you see this message within your normal HPC work - you will have problems eventually. You'll have to use the above commands to find a version that works with your already loaded packages or request for a specific version to be installed for you. This can be avoided with environment managers like ``Anaconda3`` for Python for example.
+If you see this message `The following have been reloaded with a version change:` within your normal HPC work - you will have problems eventually. You'll have to use the above commands to find a version that works with your already loaded packages or request for a specific version to be installed for you. This can be avoided with environment managers like ``Anaconda3`` for Python for example.
 
 ### Cleaning up your loaded modules 
 
