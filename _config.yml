@@ -1,5 +1,7 @@
 remote_theme: just-the-docs/just-the-docs
 
+markdown: GFM
+
 plugins:
   - jekyll-remote-theme
   - jekyll-relative-links
