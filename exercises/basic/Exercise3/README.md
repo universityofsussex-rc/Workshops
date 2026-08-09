@@ -178,7 +178,7 @@ It might be worthwhile to put some useful `echo` commands to state the job has c
 
 Copy the ``workshop.job`` script and call it ``workshop_variables.job``.
 
-Modify the script to change directory to your ITS home directory, print the current working directory command output and the change back to the jobscript working directory using the ``$SLURM_SUBMIT_DIR`` and ``$HOME`` variables.
+Modify the script to change directory to your ITS home directory, print the current working directory command output and then change back to the jobscript working directory using the ``$SLURM_SUBMIT_DIR`` and ``$HOME`` variables.
 
 ### Simple Host check 
 

@@ -71,7 +71,7 @@ Things to remember when installing software:
 
 ### Example Install Exercise
 
-Here will will load modules for the compilers, download the source files and install to a custom directory.
+Here we will load modules for the compilers, download the source files and install to a custom directory.
 
 1. First we need to load a compiler. Here I've chosen GCC v 13.3.0 and all the bells and whistles that comes with CMake - we arent going to use CMake, this is just habbit for it to work with other modules which might need more advanced installs.
 
@@ -82,22 +82,24 @@ export CC=$(which gcc);export CXX=$(which g++)
 echo $CC; echo $CXX
 ```
 
+Note - If you get a module not found error from `module load CMake`, see 'Software Not Found' in the [FAQs section of the Artemis documentation](https://artemis-docs.hpc.sussex.ac.uk/staging/faq.html).
 
 2. Now we need to fetch the files and unpack them.
 
 ```bash
-mkdir /lustre/dir/gsl
+mkdir /mnt/lustre/<your_user_path>/gsl
+cd /mnt/lustre/<your_user_path>/gsl
 wget https://ftp.gnu.org/gnu/gsl/gsl-2.7.1.tar.gz
 tar -xvf gsl-2.7.1.tar.gz
-cd gsl
+cd gsl-2.7.1
 ```
 
 3. Now we perform a simple configure make. Normally on a personal laptop you wouldnt need the prefix path - however you do not have root access and need to install to a directory owned by you.
 
 ```bash
 
-mkdir /lustre/dir/gsl/install
-./configure --prefix /lustre/dir/gsl/install
+mkdir /lustre/dir/gsl/gsl-2.7.1/install
+./configure --prefix /lustre/dir/gsl/gsl-2.7.1/install
 make -j10
 make install
 ```
@@ -118,7 +120,7 @@ You might wonder why we also set the CC and CXX paths - this is so that even if 
 
 ## EasyBuild
 
-We use EasyBuild on the Artemis HPC. You are also welcome to use it to install adittional packages which are simple, and needed quickly. Remember to submit a service request though for it to be built by System Admin specifically for Artemis architecture.
+We use EasyBuild on the Artemis HPC. You are also welcome to use it to install additional packages which are simple, and needed quickly. Remember to submit a service request though for it to be built by System Admin specifically for Artemis architecture.
 
 ### What is EasyBuild?
 
@@ -144,7 +146,7 @@ You run commands like:
 
 ```bash
 eb -S GSL
-eb Dr GSL-2.7.1.eb 
+eb -Dr GSL-2.7.1.eb 
 eb -r GSL-2.7.1.eb
 ```
 
