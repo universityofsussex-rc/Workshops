@@ -287,15 +287,15 @@ You should always rely on your own environment or a module loaded by the `module
 | **IMPORTANT:** You do not need to do these steps today. Creating a kernel from scratch can take time - and based on bandwidth, might take 20m or more for your own research purposes. This is here to go through the basics of how to create a kernel to use. |
 
 
-4. Start a Compute Session
+1. Start a Compute Session
 
-    Leaving you Jupyter Notebook session running, in another tab navigate to the Dashboard.
+    Leaving your Jupyter Notebook session running, in another tab navigate to the Dashboard.
 
     Start an interactive session:
     - Click Cluster -> prd Shell Access.
     - `srun --pty bash -l`
 
-5. Init Conda and Create Env
+2. Init Conda and Create Env
 
     This is pretty much step by step to create your own Python environment on the HRC. Again - You dont have to actually run this.
 
@@ -305,13 +305,13 @@ You should always rely on your own environment or a module loaded by the `module
     - `conda create -y --name Py3.10-Python numpy scipy jupyter ipython`
     - `conda activate Py3.10-Python`
 
-6. Install Kernel
+3. Install Kernel
 
     This is the magic which will make your user environment available to the Jupyter App. AGAIN dont actually run this.
 
     - `python -m ipykernel install --user --name Py3.10-Python --display-name "Python (Py3.10)"`
 
-7. Clean Up
+4. Clean Up
 
     Exit the Interactive Session and Close the Tab
 
@@ -321,7 +321,7 @@ You should always rely on your own environment or a module loaded by the `module
 
 There is now a kernel which you can `pip install` python packages to.
 
-7. Connect the Kernel
+5. Connect the Kernel
 
     In your Jupyter Session - click the Kernel button in the top right.
 
@@ -344,7 +344,7 @@ Simply Exiting your Notebook will not stop the session or Kernel.
 
 Or if you have started multiple notebook - you might need to clean up your environment.
 
-8. Stoping Running Kernels
+6. Stoping Running Kernels
 
     In the Jupyter Home File Browser Tab:
 
@@ -353,7 +353,7 @@ Or if you have started multiple notebook - you might need to clean up your envir
     Click the `Running` Tab - And you can individually or group Kill running kernels.
 
 
-9. Ending your session
+7. Ending your session
 
     Simply Exit all your Jupyter Tabs.
 
