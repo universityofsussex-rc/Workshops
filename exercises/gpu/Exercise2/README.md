@@ -58,8 +58,6 @@ conda activate <ENV_PATH>
 python -c "import torch; print(torch.__version__, torch.version.cuda)"
 ```
 
-*TODO(RC): provide `<ENV_PATH>`, or delete this option.*
-
 ## Option B: build your own environment
 
 This can take 10 to 20 minutes and downloads a couple of gigabytes, so start it now and read on while it runs.
@@ -89,7 +87,6 @@ This can take 10 to 20 minutes and downloads a couple of gigabytes, so start it 
 
     An older build such as `cu121` will install without complaint but may fail on a newer GPU with `no kernel image is available for execution on the device`. See [pytorch.org/get-started](https://pytorch.org/get-started/locally/) for the current command for your CUDA version.
 
-    *TODO(RC): confirm the build that works on the RTX nodes, and put it here.*
 
 4. Check the install (on the CPU, so `CUDA available` will be `False` here, which is expected):
 

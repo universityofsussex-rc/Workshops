@@ -73,7 +73,7 @@ The exercises use a few settings that depend on the session you are attending. Y
 | GPU partition for batch jobs | `<GPU_PARTITION>` | **Brighton sessions: `brighton`** (the same partition, with a GPU requested). Sussex sessions: `workshops` |
 | GPU flavour | `<GPU_FLAVOR>` | **Brighton sessions: `RTX`**. Other flavours on Artemis: `A40` |
 | CUDA module | `<CUDA_MODULE>` | Probably `CUDA/12.9.1`. The RTX GPUs need a recent CUDA, see below |
-| Shared Python environment (optional) | `<ENV_PATH>` | *TODO(RC): fill in, or leave for participants to build their own* |
+| Shared Python environment (optional) | `<ENV_PATH>` | `/mnt/shared/admin/workshops/envs/rtx-brighton` |
 | GPUs available to the room | n/a | Brighton sessions: 6 (3 RTX nodes with 2 GPUs each). Sussex Sessions: 28 |
 
 > **Brighton participants:** the other exercise pages on this site say `workshops`. Wherever you see it, type `brighton` instead. Brighton accounts can only submit to the `brighton` partition, which is made up of 3 of the RTX GPU nodes.
@@ -103,12 +103,12 @@ Artemis has 15 GPU nodes as well as CPU-only nodes, all controlled by Slurm. Eac
 | --- | --- | --- | --- | --- |
 | `A40` (48 GB per GPU) | 4 | 2 | 512 GB | 8.6 (`sm_86`) |
 | `A40` (48 GB per GPU) | 7 | 2 | 1 TB | 8.6 (`sm_86`) |
-| `RTX` | 4 (3 in the `brighton` partition) | 2 | 768 GB | *TODO(RC): confirm, see below* |
+| `RTX` (96 GB per GPU) | 4 (3 in the `brighton` partition) | 2 | 768 GB | 12.0 (`sm_120`) |
 | CPU only | 2 | none | 768 GB | n/a |
 
 - **The RTX GPUs are a newer architecture than the A40.** Run `nvidia-smi --query-gpu=name,compute_cap --format=csv` in Exercise 1 to see exactly what you were given. If they are Blackwell-generation GPUs they have compute capability 12.0 (`sm_120`), which needs **CUDA 12.8 or newer** and a framework build that includes `sm_120`.
 - **The Brighton partition** has 3 of the RTX nodes, so 6 GPUs in total. Interactive sessions on `brighton` run on one of these nodes too, but you only get a GPU if you ask for one.
-- *TODO(RC): time limits and any per-user GPU limit.*
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

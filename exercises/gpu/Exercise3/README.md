@@ -75,8 +75,6 @@ cd ~/HPC-Workshop/workdir/GPU
     nvcc --version
     ```
 
-    *TODO(RC): confirm `nvcc` is available in a CPU session. If it is not, the compile step below still works because the job script compiles on the GPU node.*
-
 5. Try loading a second, different CUDA version on top. What warning does Module give you? This is why we `module purge` first and never mix versions.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -145,7 +143,6 @@ nvcc -O2 -o vector_add vector_add.cu
 3. Submit it, then read the output. mixbench reports **GFLOPS** (arithmetic speed) and **GB/s** (memory speed) as the amount of arithmetic per byte of memory changes. Where does the GPU stop being limited by memory and start being limited by arithmetic?
 4. If the project provides a CPU version, build and run it the same way in a CPU job and compare.
 
-*TODO(RC): confirm the CMake module name and test the build on Artemis before the workshop.*
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
