@@ -24,3 +24,14 @@
       items:
         - title: Advanced Exercise 1
           url: /Exercises/Advanced/Exercise1/
+    - title: GPU
+      url: /Exercises/GPU/
+      items:
+        - title: GPU Exercise 1
+          url: /Exercises/GPU/Exercise1/
+        - title: GPU Exercise 2
+          url: /Exercises/GPU/Exercise2/
+        - title: GPU Exercise 3
+          url: /Exercises/GPU/Exercise3/
+        - title: GPU Exercise 4
+          url: /Exercises/GPU/Exercise4/

@@ -1,0 +1,19 @@
+#!/bin/bash
+# GPU Exercise 1 - your first GPU job.
+# Replace <GPU_PARTITION>, <GPU_FLAVOR> and <CUDA_MODULE> with the values for your session
+# (see "Workshop settings" on the GPU Exercises landing page). Brighton sessions: brighton and RTX.
+# --gres=gpu:<flavor>:<number>   e.g. gpu:RTX:1 or gpu:A40:1. gpu:1 asks for any one GPU.
+#SBATCH --job-name=gpu_test
+#SBATCH --partition=<GPU_PARTITION>
+#SBATCH --gres=gpu:<GPU_FLAVOR>:1
+#SBATCH --time=00:05:00
+#SBATCH --output=gpu_test-%j.out
+
+echo "Job $SLURM_JOB_ID on $(hostname) at $(date)"
+echo "Submitted from: $SLURM_SUBMIT_DIR"
+
+module purge
+module load <CUDA_MODULE>
+
+nvidia-smi
+nvidia-smi --query-gpu=name,memory.total,compute_cap --format=csv

@@ -1,0 +1,21 @@
+#!/bin/bash
+# GPU Exercise 3 - compile and run a CUDA C program.
+# Replace <GPU_PARTITION>, <GPU_FLAVOR> and <CUDA_MODULE> with the values for your session.
+# Compiled CUDA code depends on the GPU architecture, so name the flavor (e.g. gpu:RTX:1).
+#SBATCH --job-name=cuda_vector_add
+#SBATCH --partition=<GPU_PARTITION>
+#SBATCH --gres=gpu:<GPU_FLAVOR>:1
+#SBATCH --time=00:05:00
+#SBATCH --output=cuda_vector_add-%j.out
+
+module purge
+module load <CUDA_MODULE>
+
+echo "nvcc is: $(which nvcc)"
+nvcc --version
+
+# Compile on the GPU node so the build matches the GPU it runs on.
+nvcc -O2 -o vector_add vector_add.cu
+
+./vector_add
+./vector_add 100000000

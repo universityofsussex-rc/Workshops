@@ -1,0 +1,26 @@
+#!/bin/bash
+# GPU Exercise 2 - Python (PyTorch) on the GPU, with a GPU usage log.
+# Replace <GPU_PARTITION>, <GPU_FLAVOR>, <CUDA_MODULE> and <ENV_PATH> with the values for your session.
+# Name the GPU flavor (e.g. gpu:RTX:1) so your PyTorch build matches the GPU architecture.
+#SBATCH --job-name=gpu_check
+#SBATCH --partition=<GPU_PARTITION>
+#SBATCH --gres=gpu:<GPU_FLAVOR>:1
+#SBATCH --time=00:10:00
+#SBATCH --output=gpu_check-%j.out
+
+echo "Job $SLURM_JOB_ID on $(hostname) at $(date)"
+
+module purge
+module load <CUDA_MODULE>
+module load Anaconda3/2022.10
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate <ENV_PATH>
+
+# Log GPU utilisation and memory every 2 seconds in the background
+nvidia-smi --query-gpu=timestamp,utilization.gpu,memory.used --format=csv -l 2 > gpu_usage-$SLURM_JOB_ID.csv &
+MON_PID=$!
+
+python gpu_check.py --n 8192 --repeats 10
+
+kill $MON_PID
+echo "Finished at $(date)"

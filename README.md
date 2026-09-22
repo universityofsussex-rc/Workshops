@@ -143,7 +143,11 @@ The Exercises are expected to take around 2h to complete, based on a 2-4h worksh
 <!-- GPU EXERCISES -->
 ##  GPU Exercises
 
-### TBD
+1. [Overview and Exercise1]({{ site.baseurl }}{% link exercises/gpu/README.md %})
+1. [Exercise1]({{ site.baseurl }}{% link exercises/gpu/Exercise1/README.md %})
+1. [Exercise2]({{ site.baseurl }}{% link exercises/gpu/Exercise2/README.md %})
+1. [Exercise3]({{ site.baseurl }}{% link exercises/gpu/Exercise3/README.md %})
+1. [Exercise4]({{ site.baseurl }}{% link exercises/gpu/Exercise4/README.md %})
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

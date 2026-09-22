@@ -1,0 +1,29 @@
+#!/bin/bash
+# GPU Exercise 4 - template for your own GPU code.
+# Copy this file, then edit the lines marked  <-- CHANGE.
+# Replace <GPU_PARTITION>, <GPU_FLAVOR> and <CUDA_MODULE> with the values for your session.
+
+# <-- CHANGE: a name for your job
+#SBATCH --job-name=my_gpu_job
+#SBATCH --partition=<GPU_PARTITION>
+# 1 GPU per job: the GPUs are shared by the whole room.
+# <-- CHANGE: name the flavor (gpu:RTX:1 or gpu:A40:1) if your code depends on the CUDA
+# version or GPU architecture. If it just needs "a GPU", gpu:1 is fine.
+#SBATCH --gres=gpu:<GPU_FLAVOR>:1
+# <-- CHANGE: a realistic time limit. Keep it short today
+#SBATCH --time=00:10:00
+# %x = job name, %j = job id
+#SBATCH --output=%x-%j.out
+
+echo "Job $SLURM_JOB_ID on $(hostname) at $(date)"
+
+module purge
+# <-- CHANGE: the modules your code needs, with versions
+module load <CUDA_MODULE>
+
+# <-- CHANGE if you use a conda environment (remove the # from both lines)
+# source "$(conda info --base)/etc/profile.d/conda.sh"
+# conda activate <ENV_PATH>
+
+# <-- CHANGE: your code
+python my_script.py

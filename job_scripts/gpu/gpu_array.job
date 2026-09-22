@@ -1,0 +1,20 @@
+#!/bin/bash
+# GPU Exercise 4 (extension) - run the same code with different inputs, one GPU per task.
+# --array=1-4%2 means tasks 1 to 4, with at most 2 running at once (shares the GPUs politely).
+# %A = array job id, %a = task number in the output file name.
+# Replace <GPU_PARTITION>, <GPU_FLAVOR> and <CUDA_MODULE> with the values for your session.
+# The --gres number is per node, so each array task gets one GPU here.
+#SBATCH --job-name=gpu_array
+#SBATCH --partition=<GPU_PARTITION>
+#SBATCH --gres=gpu:<GPU_FLAVOR>:1
+#SBATCH --time=00:10:00
+#SBATCH --array=1-4%2
+#SBATCH --output=gpu_array-%A_%a.out
+
+echo "Array job $SLURM_ARRAY_JOB_ID, task $SLURM_ARRAY_TASK_ID on $(hostname)"
+
+module purge
+module load <CUDA_MODULE>
+
+# Use the task number as the input, e.g. a random seed or a parameter file number.
+python my_script.py --seed $SLURM_ARRAY_TASK_ID
