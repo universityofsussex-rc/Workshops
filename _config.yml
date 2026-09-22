@@ -33,4 +33,9 @@ include:
  - exercises/gpu/Exercise2/README.md
  - exercises/gpu/Exercise3/README.md
  - exercises/gpu/Exercise4/README.md
+ - solutions/basic/Exercise1/README.md
+ - solutions/basic/Exercise2/README.md
+ - solutions/basic/Exercise3/README.md
+ - solutions/gpu/README.md
+
 

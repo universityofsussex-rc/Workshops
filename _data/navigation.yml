@@ -35,3 +35,14 @@
           url: /Exercises/GPU/Exercise3/
         - title: GPU Exercise 4
           url: /Exercises/GPU/Exercise4/
+    - title: Solutions
+      url: /Solutions/
+      items:
+        - title: Basic Exercise 1 Solution
+          url: /Solutions/Basic/Exercise1/
+        - title: Basic Exercise 2 Solution
+          url: /Solutions/Basic/Exercise2/
+        - title: Basic Exercise 3 Solution
+          url: /Solutions/Basic/Exercise3/
+        - title: GPU Solution
+          url: /Solutions/GPU/
